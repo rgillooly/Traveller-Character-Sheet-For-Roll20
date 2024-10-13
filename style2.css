@@ -50,6 +50,15 @@ h1 {
     grid-column: span 2;
 }
 
+.bottom-right-image {
+    grid-column: 2;                       /* Place in the second column */
+    grid-row: 2;                          /* Place in the second row */
+    justify-self: end;                    /* Align to the end of the column */
+    align-self: end;                      /* Align to the end of the row */
+    width: 200px;                         /* Adjust width as needed */
+    height: auto;                         /* Maintain aspect ratio */
+}
+
 .attr_armor_box {
     border-left: 15px solid black;
     grid-column: span 2;
@@ -57,16 +66,17 @@ h1 {
 }
 
 .attr_statsandmods_box {
-    border-right: 15px solid black;  /* Left border */
-    border-bottom: 15px solid black; /* Right border */
-    grid-column: span 1;
-    grid-row: span 1; /* Span 2 rows */
+    border-right: 15px solid black;   /* Right border */
+    border-bottom: 15px solid black;  /* Bottom border */
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(2, auto);    /* 2 rows that adjust to content */
+    gap: 10px;                            /* Space between grid items */
+    padding: 10px;                       /* Padding for the box */
+    box-sizing: border-box;              /* Include padding and border in width */
 }
 
-.attr_stat_field {
+.attr_ {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
