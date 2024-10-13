@@ -1,0 +1,468 @@
+.charsheet, .main_container {
+    padding: 0;
+    margin: 0;
+  }
+  
+
+.charsheet {
+    background-image: url('https://drive.attr_google.attr_com/uc?export=view&id=1_E1kziMXD71g_YixAeZoMmaFzEnkI0gl');
+    /* Path to your image */
+    min-width: 1100px;
+    height: 1000px;
+    /* Ensures the image covers the entire background */
+    background-repeat: no_repeat;
+    /* Prevents the image from repeating */
+    position: relative;
+}
+
+._main_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Spacing between grid items */
+    max-width: 1200px; /* Adjust based on your preference */
+    margin: 0 auto; /* Center the form on the page */
+}
+
+.attr_name {
+    position: absolute;
+    top: 50px;
+    left: 95px;
+}
+
+.attr_rads {
+    position: absolute;
+    top: 74px;
+    left: 95px;
+}
+
+.attr_species {
+    position: absolute;
+    top: 98px;
+    left: 115px;
+}
+
+.attr_species_traits {
+    position: absolute;
+    top: 123px;
+    left: 173px;
+    width: 115px;
+}
+
+.attr_homeworld {
+    position: absolute;
+    top: 148px;
+    left: 147px;
+    width: 140px;
+
+}
+
+.attr_age {
+    position: absolute;
+    top: 50px;
+    left: 357px;
+    width: 100px;
+}
+
+.attr_stat_field_str {
+    position: absolute;
+    top: 225px;
+    left: 34px;
+}
+
+.attr_stat_input_str {
+    width: 30px;
+}
+
+.attr_mod_field_str {
+    position: absolute;
+    top: 225px;
+    left: 74px;
+}
+
+.attr_mod_input_str {
+    width: 30px;
+}
+
+.attr_stat_field_dex {
+    position: absolute;
+    top: 225px;
+    left: 190px;
+}
+
+.attr_stat_input_dex {
+    width: 30px;
+}
+
+.attr_mod_field_dex {
+    position: absolute;
+    top: 225px;
+    left: 230px;
+}
+
+.attr_mod_input_dex {
+    width: 30px;
+}
+
+.attr_stat_field_end {
+    position: absolute;
+    top: 225px;
+    left: 340px;
+}
+
+.attr_stat_input_end {
+    width: 30px;
+}
+
+.attr_mod_field_end {
+    position: absolute;
+    top: 225px;
+    left: 380px;
+}
+
+.attr_mod_input_end {
+    width: 30px;
+}
+
+.attr_stat_field_int {
+    position: absolute;
+    top: 285px;
+    left: 34px;
+}
+
+.attr_stat_input_int {
+    width: 30px;
+}
+
+.attr_mod_field_int {
+    position: absolute;
+    top: 285px;
+    left: 74px;
+}
+
+.attr_mod_input_int {
+    width: 30px;
+}
+
+.attr_stat_field_edu {
+    position: absolute;
+    top: 285px;
+    left: 190px;
+}
+
+.attr_stat_input_edu {
+    width: 30px;
+}
+
+.attr_mod_field_edu {
+    position: absolute;
+    top: 285px;
+    left: 230px;
+}
+
+.attr_mod_input_edu {
+    width: 30px;
+}
+
+.attr_stat_field_soc {
+    position: absolute;
+    top: 285px;
+    left: 340px;
+}
+
+.attr_stat_input_soc {
+    width: 30px;
+}
+
+.attr_mod_field_soc {
+    position: absolute;
+    top: 285px;
+    left: 380px;
+}
+
+.attr_mod_input_soc {
+    width: 30px;
+}
+
+.attr_psi_field {
+    position: absolute;
+    top: 350px;
+    left: 97px;
+}
+
+.attr_psi_input {
+    width: 50px;
+}
+
+.attr_luck_field {
+    position: absolute;
+    top: 350px;
+    left: 260px
+}
+
+.attr_luck_input {
+    width: 50px;
+}
+
+.attr_armor_box {
+    position: absolute;
+    top: 85px;
+    left: 530px;
+    width: 520px;
+}
+
+.attr_armor_type_input {
+    width: 100px;
+    height: 55px;
+}
+
+.attr_armor_rad_input {
+    position: absolute;
+    left: 130px;
+    width: 55px;
+    height: 55px;
+}
+
+.attr_armor_protection_input {
+    position: absolute;
+    left: 200px;
+    width: 100px;
+    height: 55px;
+}
+
+.attr_armor_weight_input {
+    position: absolute;
+    left: 315px;
+    width: 48px;
+    height: 55px;
+}
+
+.attr_armor_options_input {
+    position: absolute;
+    left: 375px;
+    width: 145px;
+    height: 55px;
+}
+
+.attr_finances_box {
+    position: absolute;
+    top: 205px;
+    left: 555px;
+    height: 200px;
+    width: 123px;
+}
+
+.attr_finances_pension_input {
+    position: absolute; 
+}
+
+.attr_finances_debt_input {
+    position: absolute;
+    top: 40px; 
+}
+
+.attr_finances_cashonhand_input {
+    position: absolute;
+    top: 85px; 
+}
+
+.attr_finances_monthlyshippayments_input {
+    position: absolute;
+    top: 130px; 
+}
+
+.attr_finances_livingcost_input {
+    position: absolute;
+    top: 175px; 
+}
+
+.attr_allies_box {
+    position: absolute;
+    top: 205px;
+    left: 785px;
+}
+
+.attr_allies_box_input {
+    width: 250px;
+    height: 90px;
+}
+
+.attr_study_box {
+    position: absolute;
+    top: 285px;
+    left: 775px;
+    width: 290px;
+}
+
+.attr_study_traininginskill_input {
+    position: absolute;
+    top: 55px;
+    left: 140px;
+    width: 150px;
+}
+
+.attr_study_weeksdone_input {
+    position: absolute;
+    top: 75px;
+    left: 60px;
+    width: 100px;
+}
+
+.attr_study_weekstotal_input {
+    position: absolute;
+    top: 75px;
+    left: 180px;
+    width: 110px;
+}
+
+.attr_study_periodscomplete_input {
+    position: absolute;
+    top: 100px;
+    left: 195px;
+    width: 95px;
+}
+
+.attr_skills_box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+    grid-template-rows: repeat(17, 1fr); /* 3 rows of 100px each */
+    grid-auto-flow: column;
+    column-gap: 20px; /* Space between grid items */
+    row-gap: 1px;
+    position: absolute; /* Positioning the skills box if needed */
+    top: 420px; /* Adjust as necessary */
+    left: 150px; /* Adjust as necessary */
+    width: 900px; /* Responsive width */
+    height: 280px;
+}
+
+.attr_skills_jackofalltrades_item {
+    position: absolute;
+    left: 300px;
+    top:393px;
+}
+
+.attr_skills_jackofalltrades_input {
+    width: 30px;
+}
+
+.attr_skills_untrained_item {
+    position: absolute;
+    left: 415px;
+    top:393px;
+}
+
+.attr_skills_untrained_input {
+    width: 30px;
+}
+
+.attr_grid_item {
+    display: flex; /* Center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 20px;
+    height: 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+.attr_grid_item input {
+    display: flex; /* Center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 20px;
+    height: 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+.attr_weapons_box {
+    position: absolute;
+    top: 765px;
+    left: 45px;
+    width: 685px;
+}
+
+.attr_weapons_weapon_input {
+    position: absolute;
+    width: 140px;
+}
+
+.attr_weapons_tl_input {
+    position: absolute;
+    left: 154px;
+    width: 35px;
+}
+
+.attr_weapons_range_input {
+    position: absolute;
+    left: 197px;
+    width: 80px;
+}
+
+.attr_weapons_damage_input {
+    position: absolute;
+    left: 285px;
+    width: 80px;
+}
+
+.attr_weapons_kg_input {
+    position: absolute;
+    left: 375px;
+    width: 40px;
+}
+
+.attr_weapons_magazine_input {
+    position: absolute;
+    left: 425px;
+    width: 95px;
+}
+
+.attr_weapons_traits_input {
+    position: absolute;
+    left: 535px;
+    width: 150px;
+}
+
+.attr_augments_box {
+    position: absolute;
+    top: 765px;
+    left: 790px;
+}
+
+.attr_augments_type_input {
+    position: absolute;
+    width: 80px;
+}
+
+.attr_augments_tl_input {
+    position: absolute;
+    left: 90px;
+    width: 35px;
+}
+
+.attr_augments_improvement_input {
+    position: absolute;
+    left: 135px;
+    width: 130px;
+}
+
+.attr_equipment_box {
+    position: absolute;
+    top: 905px;
+    left: 45px;
+}
+
+.attr_equipment_name_input {
+    width: 235px
+}
+
+.attr_equipment_kg_input {
+    position: absolute;
+    left: 245px;
+    width: 85px;
+}
+
+.attr_equipment_total_kg_input {
+    position: absolute;
+    top: 50px;
+    left: 875px;
+    width: 110px;
+}
