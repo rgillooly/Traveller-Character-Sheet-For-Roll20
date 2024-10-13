@@ -1,56 +1,48 @@
-.charsheet, .main_container {
-    padding: 0;
+input, textarea, select, button {
+    color:white;
     margin: 0;
+    padding: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    outline: 1px black;
+    box-sizing: border-box;
   }
-  
 
-.charsheet {
-    background-image: url('https://github.com/rgillooly/Traveller-Character-Sheet-For-Roll20/blob/main/ImprovedSheet4-1.png');
-    /* Path to your image */
-    min-width: 1100px;
-    height: 1000px;
-    /* Ensures the image covers the entire background */
-    background-repeat: no_repeat;
-    /* Prevents the image from repeating */
-    position: relative;
-}
-
-._main_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 20px; /* Spacing between grid items */
-    max-width: 1200px; /* Adjust based on your preference */
-    margin: 0 auto; /* Center the form on the page */
+.main_container {
+    background-color: rgb(255, 255, 255); /* Background color for the div */
+    padding: 20px;              /* Optional: Adds space inside the container */
+    overflow: auto; 
 }
 
 .attr_name {
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 95px;
 }
 
 .attr_rads {
     position: absolute;
-    top: 74px;
+    top: 94px;
     left: 95px;
 }
 
 .attr_species {
     position: absolute;
-    top: 98px;
+    top: 118px;
     left: 115px;
 }
 
 .attr_species_traits {
     position: absolute;
-    top: 123px;
+    top: 143px;
     left: 173px;
     width: 115px;
 }
 
 .attr_homeworld {
     position: absolute;
-    top: 148px;
+    top: 168px;
     left: 147px;
     width: 140px;
 
@@ -58,14 +50,14 @@
 
 .attr_age {
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 357px;
     width: 100px;
 }
 
 .attr_stat_field_str {
     position: absolute;
-    top: 225px;
+    top: 245px;
     left: 34px;
 }
 
@@ -75,7 +67,7 @@
 
 .attr_mod_field_str {
     position: absolute;
-    top: 225px;
+    top: 245px;
     left: 74px;
 }
 
@@ -85,7 +77,7 @@
 
 .attr_stat_field_dex {
     position: absolute;
-    top: 225px;
+    top: 245px;
     left: 190px;
 }
 
@@ -95,7 +87,7 @@
 
 .attr_mod_field_dex {
     position: absolute;
-    top: 225px;
+    top: 245px;
     left: 230px;
 }
 
@@ -105,7 +97,7 @@
 
 .attr_stat_field_end {
     position: absolute;
-    top: 225px;
+    top: 245px;
     left: 340px;
 }
 
@@ -115,7 +107,7 @@
 
 .attr_mod_field_end {
     position: absolute;
-    top: 225px;
+    top: 245px;
     left: 380px;
 }
 
@@ -125,7 +117,7 @@
 
 .attr_stat_field_int {
     position: absolute;
-    top: 285px;
+    top: 305px;
     left: 34px;
 }
 
@@ -135,7 +127,7 @@
 
 .attr_mod_field_int {
     position: absolute;
-    top: 285px;
+    top: 305px;
     left: 74px;
 }
 
@@ -145,7 +137,7 @@
 
 .attr_stat_field_edu {
     position: absolute;
-    top: 285px;
+    top: 305px;
     left: 190px;
 }
 
@@ -155,7 +147,7 @@
 
 .attr_mod_field_edu {
     position: absolute;
-    top: 285px;
+    top: 305px;
     left: 230px;
 }
 
@@ -165,7 +157,7 @@
 
 .attr_stat_field_soc {
     position: absolute;
-    top: 285px;
+    top: 305px;
     left: 340px;
 }
 
@@ -175,7 +167,7 @@
 
 .attr_mod_field_soc {
     position: absolute;
-    top: 285px;
+    top: 305px;
     left: 380px;
 }
 
@@ -185,7 +177,7 @@
 
 .attr_psi_field {
     position: absolute;
-    top: 350px;
+    top: 370px;
     left: 97px;
 }
 
@@ -195,7 +187,7 @@
 
 .attr_luck_field {
     position: absolute;
-    top: 350px;
+    top: 370px;
     left: 260px
 }
 
@@ -205,7 +197,7 @@
 
 .attr_armor_box {
     position: absolute;
-    top: 85px;
+    top: 105px;
     left: 530px;
     width: 520px;
 }
@@ -245,7 +237,7 @@
 
 .attr_finances_box {
     position: absolute;
-    top: 205px;
+    top: 225px;
     left: 555px;
     height: 200px;
     width: 123px;
@@ -257,27 +249,27 @@
 
 .attr_finances_debt_input {
     position: absolute;
-    top: 40px; 
+    top: 60px; 
 }
 
 .attr_finances_cashonhand_input {
     position: absolute;
-    top: 85px; 
+    top: 105px; 
 }
 
 .attr_finances_monthlyshippayments_input {
     position: absolute;
-    top: 130px; 
+    top: 150px; 
 }
 
 .attr_finances_livingcost_input {
     position: absolute;
-    top: 175px; 
+    top: 195px; 
 }
 
 .attr_allies_box {
     position: absolute;
-    top: 205px;
+    top: 225px;
     left: 785px;
 }
 
@@ -288,35 +280,35 @@
 
 .attr_study_box {
     position: absolute;
-    top: 285px;
+    top: 305px;
     left: 775px;
     width: 290px;
 }
 
 .attr_study_traininginskill_input {
     position: absolute;
-    top: 55px;
+    top: 75px;
     left: 140px;
     width: 150px;
 }
 
 .attr_study_weeksdone_input {
     position: absolute;
-    top: 75px;
+    top: 95px;
     left: 60px;
     width: 100px;
 }
 
 .attr_study_weekstotal_input {
     position: absolute;
-    top: 75px;
+    top: 95px;
     left: 180px;
     width: 110px;
 }
 
 .attr_study_periodscomplete_input {
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 195px;
     width: 95px;
 }
@@ -329,7 +321,7 @@
     column-gap: 20px; /* Space between grid items */
     row-gap: 1px;
     position: absolute; /* Positioning the skills box if needed */
-    top: 420px; /* Adjust as necessary */
+    top: 440px; /* Adjust as necessary */
     left: 150px; /* Adjust as necessary */
     width: 900px; /* Responsive width */
     height: 280px;
@@ -338,7 +330,7 @@
 .attr_skills_jackofalltrades_item {
     position: absolute;
     left: 300px;
-    top:393px;
+    top:413px;
 }
 
 .attr_skills_jackofalltrades_input {
@@ -348,7 +340,7 @@
 .attr_skills_untrained_item {
     position: absolute;
     left: 415px;
-    top:393px;
+    top:413px;
 }
 
 .attr_skills_untrained_input {
@@ -375,7 +367,7 @@
 
 .attr_weapons_box {
     position: absolute;
-    top: 765px;
+    top: 785px;
     left: 45px;
     width: 685px;
 }
@@ -423,7 +415,7 @@
 
 .attr_augments_box {
     position: absolute;
-    top: 765px;
+    top: 785px;
     left: 790px;
 }
 
@@ -446,7 +438,7 @@
 
 .attr_equipment_box {
     position: absolute;
-    top: 905px;
+    top: 925px;
     left: 45px;
 }
 
@@ -462,7 +454,7 @@
 
 .attr_equipment_total_kg_input {
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 875px;
     width: 110px;
 }

@@ -1,521 +1,663 @@
 <div class="main_container">
-
-    <div class="attr_general_stats">
-        <input type="text" class="attr_name" name="attr_name" required>
-
-        <input type="number" class="attr_rads" name="attr_rads" required>
-
-        <input type="text" class="attr_species" name="attr_species" required>
-
-        <input type="text" class="attr_species_traits" name="attr_species_traits">
-
-        <input type="text" class="attr_homeworld" name="attr_homeworld">
-
-        <input type="number" class="attr_age" name="attr_age" required>
-    </div>
-    
-    <div class="attr_stat_field">
-        <div class="attr_stat_field_str">
-            <input type="number" class="attr_stat_input_str" name="attr_strength_field">
-        </div>
-        <div class="attr_stat_field_dex">
-            <input type="number" class="attr_stat_input_dex" name="attr_dexterity_field">
-        </div>
-        <div class="attr_stat_field_end">
-            <input type="number" class="attr_stat_input_end" name="attr_endurance_field">
-        </div>
-        <div class="attr_stat_field_int">
-            <input type="number" class="attr_stat_input_int" name="attr_intellect_field">
-        </div>
-        <div class="attr_stat_field_edu">
-            <input type="number" class="attr_stat_input_edu" name="attr_education_field">
-        </div>
-        <div class="attr_stat_field_soc">
-            <input type="number" class="attr_stat_input_soc" name="attr_social_field">
-        </div>
-
-        <div class="attr_mod_field_str">
-            <input type="number" class="attr_mod_input_str" name="attr_strength_field">
-        </div>
-        <div class="attr_mod_field_dex">
-            <input type="number" class="attr_mod_input_dex" name="attr_dexterity_field">
-        </div>
-        <div class="attr_mod_field_end">
-            <input type="number" class="attr_mod_input_end" name="attr_endurance_field">
-        </div>
-        <div class="attr_mod_field_int">
-            <input type="number" class="attr_mod_input_int" name="attr_intellect_field">
-        </div>
-        <div class="attr_mod_field_edu">
-            <input type="number" class="attr_mod_input_edu" name="attr_education_field">
-        </div>
-        <div class="attr_mod_field_soc">
-            <input type="number" class="attr_mod_input_soc" name="attr_social_field">
-        </div>
-
-        <div class="attr_psi_field">
-            <input type="number" class="attr_psi_input" name="attr_psi_field">
-        </div>
-        <div class="attr_luck_field">
-            <input type="number" class="attr_luck_input" name="attr_luck_field">
+    <div class="general_box">
+        <div class="attr_general_stats">
+            <div class="general_grid_item">
+                <label for="attr_character_name" name="attr_character_name">Name:</label>
+                <input type="text" class="attr_name" name="attr_character_name">
+            </div>
+            <div class="general_grid_item">
+                <div>
+                    <label for="rads">Rads:</label>
+                    <input type="number" name="attr_rads" value="@{rads}" placeholder="0" min="0">
+                </div>
+            </div>
+            <div class="general_grid_item">
+                <label for="attr_species">Species:</label>
+                <input name="attr_species" type="text" class="attr_species">
+            </div>
+            <div class="general_grid_item">
+                <label for="attr_species_traits">Species Traits:</label>
+                <input type="text" class="attr_species_traits" name="attr_species_traits">
+            </div>
+            <div class="general_grid_item">
+                <label for="attr_homeworld">Homeworld:</label>
+                <input type="text" class="attr_homeworld" id="attr_homeworld" name="attr_homeworld">
+            </div>
+            <div class="general_grid_item">
+                <label for="attr_age">Age:</label>
+                <input type="number" class="attr_age" id="attr_age" name="attr_age">
+            </div>
         </div>
     </div>
 
     <div class="attr_armor_box">
-        <input type="text" class="attr_armor_type_input" name="attr_armor_type_field">
-        <input type="text" class="attr_armor_rad_input" name="attr_armor_rad_field">
-        <input type="text" class="attr_armor_protection_input" name="attr_armor_protection_field">
-        <input type="text" class="attr_armor_weight_input" name="attr_armor_weight_field">
-        <input type="text" class="attr_armor_options_input" name="attr_armor_options_field">
+        <h1 style="color: maroon; background-color: black;">Armour</h1>
+        <label for="attr_armor_type_field">Armor Type:</label>
+        <input type="text" class="attr_armor_type_input" id="attr_armor_type_field" name="attr_armor_type_field">
+        <label for="attr_armor_rad_field">Armor Rad:</label>
+        <input type="text" class="attr_armor_rad_input" id="attr_armor_rad_field" name="attr_armor_rad_field">
+        <label for="attr_armor_protection_field">Armor Protection:</label>
+        <input type="text" class="attr_armor_protection_input" id="attr_armor_protection_field"
+            name="attr_armor_protection_field">
+        <label for="attr_armor_weight_field">Armor Weight:</label>
+        <input type="text" class="attr_armor_weight_input" id="attr_armor_weight_field" name="attr_armor_weight_field">
+        <label for="attr_armor_options_field">Armor Options:</label>
+        <input type="text" class="attr_armor_options_input" id="attr_armor_options_field"
+            name="attr_armor_options_field">
     </div>
 
-    <div class="attr_finances_box">
-        <input type="text" class="attr_finances_pension_input" name="attr_finances_pension_field">
-        <input type="text" class="attr_finances_debt_input" name="attr_finances_debt_field">
-        <input type="text" class="attr_finances_cashonhand_input" name="attr_finances_cashonhand_field">
-        <input type="text" class="attr_finances_monthlyshippayments_input"
-            name="attr_finances_monthlyshippayments_field">
-        <input type="text" class="attr_finances_livingcost_input" name="attr_finances_livingcost_field">
+    <div class="attr_statsandmods_box">
+        <div class="attr_label">Strength:</div>
+        <input type="number" class="attr_stat_input" id="attr_strength_field" min="0">
+        <input type="number" class="attr_mod_input" id="attr_strength_mod_field">
+        
+        <div class="attr_label">Dexterity:</div>
+        <input type="number" class="attr_stat_input" id="attr_dexterity_field" min="0">
+        <input type="number" class="attr_mod_input" id="attr_dexterity_mod_field">
+        
+        <div class="attr_label">Endurance:</div>
+        <input type="number" class="attr_stat_input" id="attr_endurance_field" min="0">
+        <input type="number" class="attr_mod_input" id="attr_endurance_mod_field">
+        
+        <div class="attr_label">Intellect:</div>
+        <input type="number" class="attr_stat_input" id="attr_intellect_field" min="0">
+        <input type="number" class="attr_mod_input" id="attr_intellect_mod_field">
+        
+        <div class="attr_label">Education:</div>
+        <input type="number" class="attr_stat_input" id="attr_education_field" min="0">
+        <input type="number" class="attr_mod_input" id="attr_education_mod_field">
+        
+        <div class="attr_label">Social:</div>
+        <input type="number" class="attr_stat_input" id="attr_social_field" min="0">
+        <input type="number" class="attr_mod_input" id="attr_social_mod_field">
     </div>
 
-    <div class="attr_allies_box">
-        <input type="text" class="attr_allies_box_input" name="attr_allies_box_field">
-    </div>
-
-    <div class="attr_study_box">
-        <input type="text" class="attr_study_traininginskill_input" name="attr_study_traininginskill_field">
-        <input type="text" class="attr_study_weeksdone_input" name="attr_study_weeksdone_field">
-        <input type="text" class="attr_study_weekstotal_input" name="attr_study_weekstotal_field">
-        <input type="text" class="attr_study_periodscomplete_input" name="attr_study_perriodscomplete_field">
-    </div>
-
-    <div class="attr_jackofalltrades">
-        <div class="attr_skills_jackofalltrades_item">
-            <input type="text" class="attr_skills_jackofalltrades_input" name="attr_study_jackofalltrades_field">
-        </div>
-        <div class="attr_skills_untrained_item">
-            <input type="text" class="attr_skills_untrained_input" name="attr_study_untrained_field">
-        </div>
-    </div>
-
-    <div class="attr_skills_box">
-
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_admin_input" name="attr_study_admin_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_advocate_input" name="attr_study_advocate_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_animals_input" name="attr_study_animals_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_handling_input" name="attr_study_handling_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_training_input" name="attr_study_training_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_veterinary_input" name="attr_study_veterinary_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_art_input" name="attr_study_art_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_art1_input" name="attr_study_art1_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_art2_input" name="attr_study_art2_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_art3_input" name="attr_study_art3_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_astrogation_input" name="attr_study_astrogation_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_athletics_input" name="attr_study_athletics_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_dexterity_input" name="attr_study_dexterity_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_endurance_input" name="attr_study_endurance_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_strength_input" name="attr_study_strength_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_broker_input" name="attr_study_broker_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_carouse_input" name="attr_study_carouse_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_deception_input" name="attr_study_deception_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_diplomat_input" name="attr_study_diplomat_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_drive_input" name="attr_study_drive_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_hovercraft_input" name="attr_study_hovercraft_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_mole_input" name="attr_study_mole_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_tracked_input" name="attr_study_tracked_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_walker_input" name="attr_study_walker_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_wheeled_input" name="attr_study_wheeled_field">
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_electronics_input" name="attr_study_electronics_field">
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_comms_input" name="attr_study_comms_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_computers_input" name="attr_study_computers_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_remote_ops_input" name="attr_study_remote_ops_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_sensors_input" name="attr_study_sensors_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_engineer_input" name="attr_study_engineer_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_j_drive_input" name="attr_study_j_drive_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_life_support_input" name="attr_study_life_support_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_m_drive_input" name="attr_study_m_drive_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_power_plant_input" name="attr_study_power_plant_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_explosives_input" name="attr_study_explosives_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_flyer_input" name="attr_study_flyer_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_airship_input" name="attr_study_airship_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_grav_input" name="attr_study_grav_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_ornithopter_input" name="attr_study_ornithopter_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_rotor_input" name="attr_study_rotor_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_wing_input" name="attr_study_wing_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_gambler_input" name="attr_study_gambler_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_gunner_input" name="attr_study_gunner_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_capital_input" name="attr_study_capital_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_ortillery_input" name="attr_study_ortillery_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_screen_input" name="attr_study_screen_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_turret_input" name="attr_study_turret_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_gun_combat_input" name="attr_study_gun_combat_field">
-
+        <div class="attr_finances_box">
+            <h1 style="color: maroon; background-color: black;">Finances</h1>
+            <label for="attr_finances_pension_field">Pension:</label>
+            <input type="text" class="attr_finances_pension_input" id="attr_finances_pension_field"
+                name="attr_finances_pension_field">
+            <label for="attr_finances_debt_field">Debt:</label>
+            <input type="text" class="attr_finances_debt_input" id="attr_finances_debt_field"
+                name="attr_finances_debt_field">
+            <label for="attr_finances_cashonhand_field">Cash on Hand:</label>
+            <input type="text" class="attr_finances_cashonhand_input" id="attr_finances_cashonhand_field"
+                name="attr_finances_cashonhand_field">
+            <label for="attr_finances_monthlyshippayments_field">Monthly Ship Payments:</label>
+            <input type="text" class="attr_finances_monthlyshippayments_input"
+                id="attr_finances_monthlyshippayments_field" name="attr_finances_monthlyshippayments_field">
+            <label for="attr_finances_livingcost_field">Living Cost:</label>
+            <input type="text" class="attr_finances_livingcost_input" id="attr_finances_livingcost_field"
+                name="attr_finances_livingcost_field">
+        </div>
+
+        <div class="stacked_items">
+            <h1 style="color: maroon; background-color: black;">Allies, Contacts, Enemies, Rivals</h1>
+            <div class="attr_allies_box stacked_item">
+                <input type="text" class="attr_allies_box_input" id="attr_allies_box_field"
+                    name="attr_allies_box_field">
+            </div>
+            <div class="attr_study_box stacked_item">
+                <h1 style="color: maroon; background-color: black;">Study Period</h1>
+                <label for="attr_study_traininginskill_field">Training in Skill:</label>
+                <input type="text" class="attr_study_traininginskill_input" name="attr_study-traininginskill-field">
+                <label for="attr_study_weeksdone_field">Weeks Done:</label>
+                <input type="text" class="attr_study_weeksdone_input" id="attr_study_weeksdone_field"
+                    name="attr_study_weeksdone_field">
+                <label for="attr_study_weekstotal_field">Weeks Total:</label>
+                <input type="text" class="attr_study_weekstotal_input" id="attr_study_weekstotal_field"
+                    name="attr_study_weekstotal_field">
+                <label for="attr_study_perriodscomplete_field">Periods Complete:</label>
+                <input type="text" class="attr_study_periodscomplete_input" id="attr_study_perriodscomplete_field"
+                    name="attr_study_perriodscomplete_field">
+            </div>
+        </div>
+
+        <div class="attr_jackofalltrades">
+            <div class="attr_skills_jackofalltrades_item">
+                <h1 style="color: maroon; background-color: black;">Skills:</h1>
+                <label for="attr_study_jackofalltrades_field">Jack of All Trades:</label>
+                <input type="text" class="attr_skills_jackofalltrades_input" id="attr_study_jackofalltrades_field"
+                    name="attr_study_jackofalltrades_field">
+            </div>
+            <div class="attr_skills_untrained_item">
+                <label for="attr_study_untrained_field">Untrained:</label>
+                <input type="text" class="attr_skills_untrained_input" id="attr_study_untrained_field"
+                    name="attr_study_untrained_field">
+            </div>
+        </div>
+
+        <div class="attr_skills_box">
+            <div class="attr_grid_item">
+                <label for="attr_study_admin_field">Admin:</label>
+                <input type="text" class="attr_skills_admin_input" id="attr_study_admin_field"
+                    name="attr_study_admin_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_advocate_field">Advocate:</label>
+                <input type="text" class="attr_skills_advocate_input" id="attr_study_advocate_field"
+                    name="attr_study_advocate_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_animals_field">Animals:</label>
+                <input type="text" class="attr_skills_animals_input" id="attr_study_animals_field"
+                    name="attr_study_animals_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_handling_field">Handling:</label>
+                <input type="text" class="attr_skills_handling_input" id="attr_study_handling_field"
+                    name="attr_study_handling_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_training_field">Training:</label>
+                <input type="text" class="attr_skills_training_input" id="attr_study_training_field"
+                    name="attr_study_training_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_veterinary_field">Veterinary:</label>
+                <input type="text" class="attr_skills_veterinary_input" id="attr_study_veterinary_field"
+                    name="attr_study_veterinary_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_art_field">Art:</label>
+                <input type="text" class="attr_skills_art_input" id="attr_study_art_field" name="attr_study_art_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_art1_field">Art 1:</label>
+                <input type="text" class="attr_skills_art1_input" id="attr_study_art1_field"
+                    name="attr_study_art1_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_art2_field">Art 2:</label>
+                <input type="text" class="attr_skills_art2_input" id="attr_study_art2_field"
+                    name="attr_study_art2_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_art3_field">Art 3:</label>
+                <input type="text" class="attr_skills_art3_input" id="attr_study_art3_field"
+                    name="attr_study_art3_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_astrogation_field">Astrogation:</label>
+                <input type="text" class="attr_skills_astrogation_input" id="attr_study_astrogation_field"
+                    name="attr_study_astrogation_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_athletics_field">Athletics:</label>
+                <input type="text" class="attr_skills_athletics_input" id="attr_study_athletics_field"
+                    name="attr_study_athletics_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_dexterity_field">Dexterity:</label>
+                <input type="text" class="attr_skills_dexterity_input" id="attr_study_dexterity_field"
+                    name="attr_study_dexterity_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_endurance_field">Endurance:</label>
+                <input type="text" class="attr_skills_endurance_input" id="attr_study_endurance_field"
+                    name="attr_study_endurance_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_strength_field">Strength:</label>
+                <input type="text" class="attr_skills_strength_input" id="attr_study_strength_field"
+                    name="attr_study_strength_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_broker_field">Broker:</label>
+                <input type="text" class="attr_skills_broker_input" id="attr_study_broker_field"
+                    name="attr_study_broker_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_carouse_field">Carouse:</label>
+                <input type="text" class="attr_skills_carouse_input" id="attr_study_carouse_field"
+                    name="attr_study_carouse_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_deception_field">Deception:</label>
+                <input type="text" class="attr_skills_deception_input" id="attr_study_deception_field"
+                    name="attr_study_deception_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_diplomat_field">Diplomat:</label>
+                <input type="text" class="attr_skills_diplomat_input" id="attr_study_diplomat_field"
+                    name="attr_study_diplomat_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_drive_field">Drive:</label>
+                <input type="text" class="attr_skills_drive_input" id="attr_study_drive_field"
+                    name="attr_study_drive_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_hovercraft_field">Hovercraft:</label>
+                <input type="text" class="attr_skills_hovercraft_input" id="attr_study_hovercraft_field"
+                    name="attr_study_hovercraft_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_mole_field">Mole:</label>
+                <input type="text" class="attr_skills_mole_input" id="attr_study_mole_field"
+                    name="attr_study_mole_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_tracked_field">Tracked:</label>
+                <input type="text" class="attr_skills_tracked_input" id="attr_study_tracked_field"
+                    name="attr_study_tracked_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_walker_field">Walker:</label>
+                <input type="text" class="attr_skills_walker_input" id="attr_study_walker_field"
+                    name="attr_study_walker_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_wheeled_field">Wheeled:</label>
+                <input type="text" class="attr_skills_wheeled_input" id="attr_study_wheeled_field"
+                    name="attr_study_wheeled_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_electronics_field">Electronics:</label>
+                <input type="text" class="attr_skills_electronics_input" id="attr_study_electronics_field"
+                    name="attr_study_electronics_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_comms_field">Comms:</label>
+                <input type="text" class="attr_skills_comms_input" id="attr_study_comms_field"
+                    name="attr_study_comms_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_computers_field">Computers:</label>
+                <input type="text" class="attr_skills_computers_input" id="attr_study_computers_field"
+                    name="attr_study_computers_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_remote_ops_field">Remote Ops:</label>
+                <input type="text" class="attr_skills_remote_ops_input" id="attr_study_remote_ops_field"
+                    name="attr_study_remote_ops_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_sensors_field">Sensors:</label>
+                <input type="text" class="attr_skills_sensors_input" id="attr_study_sensors_field"
+                    name="attr_study_sensors_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_engineer_field">Engineer:</label>
+                <input type="text" class="attr_skills_engineer_input" id="attr_study_engineer_field"
+                    name="attr_study_engineer_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_j_drive_field">J Drive:</label>
+                <input type="text" class="attr_skills_j_drive_input" id="attr_study_j_drive_field"
+                    name="attr_study_j_drive_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_life_support_field">Life Support:</label>
+                <input type="text" class="attr_skills_life_support_input" id="attr_study_life_support_field"
+                    name="attr_study_life_support_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_m_drive_field">M Drive:</label>
+                <input type="text" class="attr_skills_m_drive_input" id="attr_study_m_drive_field"
+                    name="attr_study_m_drive_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_power_plant_field">Power Plant:</label>
+                <input type="text" class="attr_skills_power_plant_input" id="attr_study_power_plant_field"
+                    name="attr_study_power_plant_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_explosives_field">Explosives:</label>
+                <input type="text" class="attr_skills_explosives_input" id="attr_study_explosives_field"
+                    name="attr_study_explosives_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_flyer_field">Flyer:</label>
+                <input type="text" class="attr_skills_flyer_input" id="attr_study_flyer_field"
+                    name="attr_study_flyer_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_airship_field">Airship:</label>
+                <input type="text" class="attr_skills_airship_input" id="attr_study_airship_field"
+                    name="attr_study_airship_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_grav_field">Grav:</label>
+                <input type="text" class="attr_skills_grav_input" id="attr_study_grav_field"
+                    name="attr_study_grav_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_ornithopter_field">Ornithopter:</label>
+                <input type="text" class="attr_skills_ornithopter_input" id="attr_study_ornithopter_field"
+                    name="attr_study_ornithopter_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_rotor_field">Rotor:</label>
+                <input type="text" class="attr_skills_rotor_input" id="attr_study_rotor_field"
+                    name="attr_study_rotor_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_wing_field">Wing:</label>
+                <input type="text" class="attr_skills_wing_input" id="attr_study_wing_field"
+                    name="attr_study_wing_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_gambler_field">Gambler:</label>
+                <input type="text" class="attr_skills_gambler_input" id="attr_study_gambler_field"
+                    name="attr_study_gambler_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_gunner_field">Gunner:</label>
+                <input type="text" class="attr_skills_gunner_input" id="attr_study_gunner_field"
+                    name="attr_study_gunner_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_capital_field">Capital:</label>
+                <input type="text" class="attr_skills_capital_input" id="attr_study_capital_field"
+                    name="attr_study_capital_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_ortillery_field">Ortillery:</label>
+                <input type="text" class="attr_skills_ortillery_input" id="attr_study_ortillery_field"
+                    name="attr_study_ortillery_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_screen_field">Screen:</label>
+                <input type="text" class="attr_skills_screen_input" id="attr_study_screen_field"
+                    name="attr_study_screen_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_turret_field">Turret:</label>
+                <input type="text" class="attr_skills_turret_input" id="attr_study_turret_field"
+                    name="attr_study_turret_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_gun_combat_field">Gun Combat:</label>
+                <input type="text" class="attr_skills_gun_combat_input" id="attr_study_gun_combat_field"
+                    name="attr_study_gun_combat_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_archaic_field">Archaic:</label>
+                <input type="text" class="attr_skills_archaic_input" id="attr_study_archaic_field"
+                    name="attr_study_archaic_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_energy_field">Energy:</label>
+                <input type="text" class="attr_skills_energy_input" id="attr_study_energy_field"
+                    name="attr_study_energy_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_slug_field">Slug:</label>
+                <input type="text" class="attr_skills_slug_input" id="attr_study_slug_field"
+                    name="attr_study_slug_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_gun1_field">Gun 1:</label>
+                <input type="text" class="attr_skills_gun1_input" id="attr_study_gun1_field"
+                    name="attr_study_gun1_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_heavy_weapons_field">Heavy Weapons:</label>
+                <input type="text" class="attr_skills_heavy_weapons_input" id="attr_study_heavy_weapons_field"
+                    name="attr_study_heavy_weapons_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_artillery_field">Artillery:</label>
+                <input type="text" class="attr_skills_artillery_input" id="attr_study_artillery_field"
+                    name="attr_study_artillery_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_man_port_field">Man Port:</label>
+                <input type="text" class="attr_skills_man_port_input" id="attr_study_man_port_field"
+                    name="attr_study_man_port_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_vehicle_field">Vehicle:</label>
+                <input type="text" class="attr_skills_vehicle_input" id="attr_study_vehicle_field"
+                    name="attr_study_vehicle_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_investigate_field">Investigate:</label>
+                <input type="text" class="attr_skills_investigate_input" id="attr_study_investigate_field"
+                    name="attr_study_investigate_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_language_field">Language:</label>
+                <input type="text" class="attr_skills_language_input" id="attr_study_language_field"
+                    name="attr_study_language_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_lang1_field">Language 1:</label>
+                <input type="text" class="attr_skills_lang1_input" id="attr_study_lang1_field"
+                    name="attr_study_lang1_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_lang2_field">Language 2:</label>
+                <input type="text" class="attr_skills_lang2_input" id="attr_study_lang2_field"
+                    name="attr_study_lang2_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_lang3_field">Language 3:</label>
+                <input type="text" class="attr_skills_lang3_input" id="attr_study_lang3_field"
+                    name="attr_study_lang3_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_lang4_field">Language 4:</label>
+                <input type="text" class="attr_skills_lang4_input" id="attr_study_lang4_field"
+                    name="attr_study_lang4_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_knowledge_field">Leadership:</label>
+                <input type="text" class="attr_skills_knowledge_input" id="attr_study_knowledge_field"
+                    name="attr_study_knowledge_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_fighting_field">Prersuade:</label>
+                <input type="text" class="attr_skills_fighting_input" id="attr_study_fighting_field"
+                    name="attr_study_fighting_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_pilot_field">Pilot:</label>
+                <input type="text" class="attr_skills_pilot_input" id="attr_study_pilot_field"
+                    name="attr_study_pilot_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_mech_field">Capital Ships:</label>
+                <input type="text" class="attr_skills_mech_input" id="attr_study_mech_field"
+                    name="attr_study_mech_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_understanding_field">Small Craft:</label>
+                <input type="text" class="attr_skills_understanding_input" id="attr_study_understanding_field"
+                    name="attr_study_understanding_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_medicine_field">Spacecraft:</label>
+                <input type="text" class="attr_skills_medicine_input" id="attr_study_medicine_field"
+                    name="attr_study_medicine_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_science_field">Profession:</label>
+                <input type="text" class="attr_skills_science_input" id="attr_study_science_field"
+                    name="attr_study_science_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_use_technology_field">Prof1:</label>
+                <input type="text" class="attr_skills_use_technology_input" id="attr_study_use_technology_field"
+                    name="attr_study_use_technology_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_structure_field">Prof2:</label>
+                <input type="text" class="attr_skills_structure_input" id="attr_study_structure_field"
+                    name="attr_study_structure_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_knowledg_field">Prof3:</label>
+                <input type="text" class="attr_skills_knowledg_input" id="attr_study_knowledg_field"
+                    name="attr_study_knowledg_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_encounters_field">Prof4:</label>
+                <input type="text" class="attr_skills_encounters_input" id="attr_study_encounters_field"
+                    name="attr_study_encounters_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_history_field">Recon:</label>
+                <input type="text" class="attr_skills_history_input" id="attr_study_history_field"
+                    name="attr_study_history_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_culture_field">Science:</label>
+                <input type="text" class="attr_skills_culture_input" id="attr_study_culture_field"
+                    name="attr_study_culture_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_seafarer_field">Seafarer:</label>
+                <input type="text" class="attr_skills_seafarer_input" id="attr_study_seafarer_field"
+                    name="attr_study_seafarer_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_ocean_ships_field">Ocean Ships:</label>
+                <input type="text" class="attr_skills_ocean_ships_input" id="attr_study_ocean_ships_field"
+                    name="attr_study_ocean_ships_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_personal_field">Personal:</label>
+                <input type="text" class="attr_skills_personal_input" id="attr_study_personal_field"
+                    name="attr_study_personal_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_sail_field">Sail:</label>
+                <input type="text" class="attr_skills_sail_input" id="attr_study_sail_field"
+                    name="attr_study_sail_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_submarine_field">Submarine:</label>
+                <input type="text" class="attr_skills_submarine_input" id="attr_study_submarine_field"
+                    name="attr_study_submarine_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_stealth_field">Stealth:</label>
+                <input type="text" class="attr_skills_stealth_input" id="attr_study_stealth_field"
+                    name="attr_study_stealth_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_steward_field">Steward:</label>
+                <input type="text" class="attr_skills_steward_input" id="attr_study_steward_field"
+                    name="attr_study_steward_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_streetwise_field">Streetwise:</label>
+                <input type="text" class="attr_skills_streetwise_input" id="attr_study_streetwise_field"
+                    name="attr_study_streetwise_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_survival_field">Survival:</label>
+                <input type="text" class="attr_skills_survival_input" id="attr_study_survival_field"
+                    name="attr_study_survival_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_tactics_field">Tactics:</label>
+                <input type="text" class="attr_skills_tactics_input" id="attr_study_tactics_field"
+                    name="attr_study_tactics_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_military_field">Military:</label>
+                <input type="text" class="attr_skills_military_input" id="attr_study_military_field"
+                    name="attr_study_military_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_naval_field">Naval:</label>
+                <input type="text" class="attr_skills_naval_input" id="attr_study_naval_field"
+                    name="attr_study_naval_field">
+            </div>
+            <div class="attr_grid_item">
+                <label for="attr_study_vacc_suit_field">Vacc Suit:</label>
+                <input type="text" class="attr_skills_vacc_suit_input" id="attr_study_vacc_suit_field"
+                    name="attr_study_vacc_suit_field">
+            </div>
+        </div>
+
+        <div class="weapons_box">
+            <h1 style="color: maroon; background-color: black;">Weapons:</h1>
+            <fieldset class="repeating_weapons-box">
+                <div class="repeating_weapon">
+                    <div class="attr_grid_item">
+                        <label for="attr_weapons_weapon_field">Weapon:</label>
+                        <input type="text" class="attr_weapons_weapon_input" id="attr_weapons_weapon_field"
+                            name="attr_weapons_weapon_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_weapons_tl_field">TL:</label>
+                        <input type="text" class="attr_weapons_tl_input" id="attr_weapons_tl_field"
+                            name="attr_weapons_tl_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_weapons_range_field">Range:</label>
+                        <input type="text" class="attr_weapons_range_input" id="attr_weapons_range_field"
+                            name="attr_weapons_range_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_weapons_damage_field">Damage:</label>
+                        <input type="text" class="attr_weapons_damage_input" id="attr_weapons_damage_field"
+                            name="attr_weapons_damage_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_weapons_kg_field">KG:</label>
+                        <input type="text" class="attr_weapons_kg_input" id="attr_weapons_kg_field"
+                            name="attr_weapons_kg_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_weapons_magazine_field">Magazine:</label>
+                        <input type="text" class="attr_weapons_magazine_input" id="attr_weapons_magazine_field"
+                            name="attr_weapons_magazine_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_weapons_traits_field">Traits:</label>
+                        <input type="text" class="attr_weapons_traits_input" id="attr_weapons_traits_field"
+                            name="attr_weapons_traits_field">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="augments_box">
+            <h1>Augments:</h1>
+            <fieldset class="repeating_augments-box">
+                <div class="repeating_augment">
+                    <div class="attr_grid_item">
+                        <label for="attr_augments_type_field">Type:</label>
+                        <input type="text" class="attr_augments_type_input" id="attr_augments_type_field"
+                            name="attr_augments_type_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_augments_tl_field">TL:</label>
+                        <input type="text" class="attr_augments_tl_input" id="attr_augments_tl_field"
+                            name="attr_augments_tl_field">
+                    </div>
+                    <div class="attr_grid_item_2">
+                        <label for="attr_augments_improvement_field">Improvement:</label>
+                        <input type="text" class="attr_augments_improvement_input"
+                            name="attr_augments_improvement_field">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="equipment_box">
+            <h1 style="color: maroon; background-color: black;">Equipment:</h1>
+            <fieldset class="repeating_equipment-box">
+                <div class="repeating_equipment">
+                    <div class="attr_grid_item">
+                        <label for="attr_equipment_name_field">Equipment Name:</label>
+                        <input type="text" class="attr_equipment_name_input" id="attr_equipment_name_field"
+                            name="attr_equipment_name_field">
+                    </div>
+                    <div class="attr_grid_item">
+                        <label for="attr_equipment_kg_field">KG:</label>
+                        <input type="text" class="attr_equipment_kg_input" id="attr_equipment_kg_field"
+                            name="attr_equipment_kg_field">
+                    </div>
+            </fieldset>
+            <div class="attr_grid_item">
+                <label for="attr_equipment_total_kg_field">Total KG:</label>
+                <input type="text" class="attr_equipment_total_kg_input" name="attr_equipment_total_kg_field">
+            </div>
         </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_archaic_input" name="attr_study_archaic_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_energy_input" name="attr_study_energy_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_slug_input" name="attr_study_slug_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_gun1_input" name="attr_study_gun1_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_heavy_weapons_input" name="attr_study_heavy_weapons_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_artillery_input" name="attr_study_artillery_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_man_port_input" name="attr_study_man_port_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_vehicle_input" name="attr_study_vehicle_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_investigate_input" name="attr_study_investigate_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_language_input" name="attr_study_language_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_lang1_input" name="attr_study_lang1_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_lang2_input" name="attr_study_lang2_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_lang3_input" name="attr_study_lang3_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_leadership_input" name="attr_study_leadership_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_mechanic_input" name="attr_study_mechanic_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_medic_input" name="attr_study_medic_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_melee_input" name="attr_study_melee_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_blade_input" name="attr_study_blade_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_bludgeon_input" name="attr_study_bludgeon_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_natural_input" name="attr_study_natural_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_unarmed_input" name="attr_study_unarmed_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_navigation_input" name="attr_study_navigation_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_persuade_input" name="attr_study_persuade_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_pilot_input" name="attr_study_pilot_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_capital_ships_input" name="attr_study_capital_ships_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_small_craft_input" name="attr_study_small_craft_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_spacecraft_input" name="attr_study_spacecraft_field">
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_profession_input" name="attr_study_profession_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_prof1_input" name="attr_study_prof1_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_prof2_input" name="attr_study_prof2_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_prof3_input" name="attr_study_prof3_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_prof4_input" name="attr_study_prof4_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_recon_input" name="attr_study_recon_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_science_input" name="attr_study_science_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_sci1_input" name="attr_study_sci1_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_sci2_input" name="attr_study_sci2_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_sci3_input" name="attr_study_sci3_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_sci4_input" name="attr_study_sci4_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_seafarer_input" name="attr_study_seafarer_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_ocean_ships_input" name="attr_study_ocean_ships_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_personal_input" name="attr_study_personal_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_sail_input" name="attr_study_sail_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_submarine_input" name="attr_study_submarine_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_stealth_input" name="attr_study_stealth_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_steward_input" name="attr_study_steward_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_streetwise_input" name="attr_study_streetwise_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_survival_input" name="attr_study_survival_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_tactics_input" name="attr_study_tactics_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_military_input" name="attr_study_military_field">
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_naval_input" name="attr_study_naval_field">
-
-        </div>
-        <div class="attr_grid_item">
-            <input type="text" class="attr_skills_vacc suit_input" name="attr_study_vacc suit_field">
-        </div>
-    </div>
-
-    <div class="attr_weapons_box">
-        <input type="text" class="attr_weapons_weapon_input" name="attr_weapons_weapon_field">
-        <input type="text" class="attr_weapons_tl_input" name="attr_weapons_tl_field">
-        <input type="text" class="attr_weapons_range_input" name="attr_weapons_range_field">
-        <input type="text" class="attr_weapons_damage_input" name="attr_weapons_damage_field">
-        <input type="text" class="attr_weapons_kg_input" name="attr_weapons_kg_field">
-        <input type="text" class="attr_weapons_magazine_input" name="attr_weapons_magazine_field">
-        <input type="text" class="attr_weapons_traits_input" name="attr_weapons_traits_field">
-    </div>
-
-    <div class="attr_augments_box">
-        <input type="text" class="attr_augments_type_input" name="attr_augments_type_field">
-        <input type="text" class="attr_augments_tl_input" name="attr_augments_tl_field">
-        <input type="text" class="attr_augments_improvement_input" name="attr_augments_inprovement_field">
-    </div>
-
-    <div class="attr_equipment_box">
-        <input type="text" class="attr_equipment_name_input" name="attr_equipment_name_field">
-        <input type="text" class="attr_equipment_kg_input" name="attr_equipment_kg_field">
-        <input type="text" class="attr_equipment_total_kg_input" name="attr_equipment_total_kg_field">
-    </div>
 </div>

@@ -1,0 +1,226 @@
+input, 
+textarea, 
+select {
+    all: unset; /* Resets all properties to their initial values */
+    display: block; /* Makes them block elements */
+    width: 100%; /* Makes them fill the width of the grid item */
+    box-sizing: border-box; /* Include padding and border in total width */
+    padding: 8px; /* Add some padding for better appearance */
+    font: inherit; /* Inherit font styles from the parent */
+    color: inherit; /* Inherit text color */
+    background: rgb(240, 240, 240); /* Set a light background color */
+    border: 1px solid #000; /* Add a border to match your grid styling */
+    border-radius: 4px; /* Optional: Add some border-radius for a softer look */
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, flexible widths */
+    grid-template-rows: repeat(6, auto); /* Auto-sized rows */
+    padding: 20px;
+    background-color: rgb(255, 255, 255); /* Background color for the div */
+    box-sizing: border-box;
+}
+
+/* Default styles for all boxes */
+.main_container div {
+    background-color: #f0f0f0; /* Background color for items */
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+h1 {
+    color: maroon;
+    background-color: black;
+    padding: 10px; /* Optional: Add some padding */
+}
+
+/* Specific grid-area and spanning */
+.general_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, flexible widths */
+    grid-template-rows: auto;              /* Automatic row height */
+    gap: 20px;                             /* Space between grid items */
+    padding: 20px;                         /* Padding for the container */
+    background-color: rgb(255, 255, 255); /* Background color for the div */
+    box-sizing: border-box;                /* Include padding and border in width */
+    grid-column: span 2;
+}
+
+.attr_armor_box {
+    border-left: 15px solid black;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.attr_statsandmods_box {
+    border-right: 15px solid black;  /* Left border */
+    border-bottom: 15px solid black; /* Right border */
+    grid-column: span 1;
+    grid-row: span 1; /* Span 2 rows */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.attr_stat_field {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.attr_mod_field {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.attr_psiandluck_field {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.stat_grid_item {
+    height: 50px;
+    width: 50px;
+}
+
+.attr_finances_box {
+    border-right: 15px solid black;
+    border-left: 15px solid black;
+    border-bottom: 15px solid black; 
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.attr_allies_box {
+    grid-column: span 2; /* Span 2 columns */
+}
+
+.stacked_items {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Fill the entire height of the grid cell */
+}
+
+.stacked_item {
+    margin: 5px 0; /* Space between stacked items */
+    padding: 10px;
+}
+
+.attr_study_box {
+    border-top: 15px solid black;
+    grid-column: 4;
+}
+
+.attr_jackofalltrades {
+    grid-column: span 4; /* Occupy full row (4 columns) */
+    grid-row: span 1;
+}
+
+.attr_skills_box {
+    grid-column: span 4; /* Full-width in the main grid */
+    grid-row: span 1; /* Single row in the main grid */
+    display: grid; /* Set up a nested grid */
+    grid-template-columns: repeat(6, 1fr); /* Nested grid with 6 equal columns */
+    grid-template-rows: repeat(17); /* 17 rows, each 30px tall */
+    width: 100%; /* Full width of the parent container */
+    height: max-content; /* Auto height for flexibility */
+    column-gap: 10px; /* Space between columns */
+    row-gap: 5px; /* Space between rows */
+}
+
+/* Each grid item */
+.attr_grid_item {
+    display: flex; /* Flexbox layout for centering */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    max-width: 100%; /* Ensure the item does not exceed the grid's width */
+    max-height: 100%;
+    overflow: hidden; /* Prevent any overflow of content */
+    padding: 5px; /* Optional: Add some padding for spacing */
+}
+
+.attr_grid_item_2 {
+    display: flex; /* Flexbox layout for centering */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 5px; /* Optional: Add some padding for spacing */
+    max-width: 100%; /* Ensure the item does not exceed the grid's width */
+    max-height: 100%;
+    overflow: hidden; /* Prevent any overflow of content */
+    padding: 5px; /* Optional: Add some padding for spacing */
+    grid-column: span 2; /* Make this item span across both columns */
+}
+
+fieldset {
+    display: inline-block; /* Allows width/height to apply but doesn't act fully as a block */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top; /* Aligns nicely with inline elements if needed */
+}
+
+.weapons_box {
+    grid-column: span 3; /* Spans across 3 columns */
+    border-top: 15px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;  
+}
+
+.repeating_weapon {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 30px;
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.repeating_augments-box {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 4;
+    grid-row: span 1;
+}
+
+.repeating_augment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-template-rows: repeat(2, 30px); /* 2 rows, each 30px high */
+    gap: 10px; /* Optional: Adds space between grid items */
+}
+
+.repeating_equipment-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto; /* 7 auto columns */
+    grid-column: 1 / -1; /* Span all columns */
+    grid-row: auto; /* Automatically placed in the next available row */
+    gap: 10px; /* Optional: spacing between grid items */
+}
+
+.equipment_box {
+    grid-column: span 4; /* Spans across 3 columns */
+    border-top: 15px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.repeating_equipment {
+    display: grid;
+    grid-template-columns: repeat(7, auto); /* 7 auto-sized columns */
+    grid-template-rows: 30px; /* Single row, 30px tall */
+    grid-column: 1 / -1; /* Spans all columns (start at 1, end at the last) */
+    grid-row: auto; /* Automatically placed in its own row */
+    gap: 10px; /* Optional: Adjust gap between items */
+}
+
