@@ -1,35 +1,45 @@
 input, 
-textarea, 
 select {
-    all: unset; /* Resets all properties to their initial values */
-    display: block; /* Makes them block elements */
-    width: 100%; /* Makes them fill the width of the grid item */
-    box-sizing: border-box; /* Include padding and border in total width */
-    padding: 8px; /* Add some padding for better appearance */
-    font: inherit; /* Inherit font styles from the parent */
-    color: inherit; /* Inherit text color */
-    background: rgb(240, 240, 240); /* Set a light background color */
-    border: 1px solid #000; /* Add a border to match your grid styling */
-    border-radius: 4px; /* Optional: Add some border-radius for a softer look */
+    color: rgb(255, 255, 255) !important;           /* Set text color */
+    display: block;                    /* Make them block elements */
+    width: 100%;                       /* Full width of the parent */
+    box-sizing: border-box;            /* Include padding and border in total width */
+    padding: 8px;                      /* Add padding for better appearance */
+    font: inherit;                     /* Inherit font styles from the parent */
+    background: rgb(51, 51, 51);   /* Set a light background color */
+    border-radius: 4px;                /* Optional: add some border-radius */
+    overflow: hidden;                  /* Prevent overflow of text */
+    white-space: nowrap;               /* Prevent text wrapping for input fields */
+    text-overflow: ellipsis;           /* Show ellipsis if text overflows */
+}
+
+textarea {
+    color: white;
+    background: rgb(51, 51, 51);   /* Set a light background color */  
 }
 
 .main_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns, flexible widths */
-    grid-template-rows: repeat(6, auto); /* Auto-sized rows */
+    grid-template-rows: repeat(12, auto); /* Auto-sized rows */
     padding: 20px;
-    background-color: rgb(255, 255, 255); /* Background color for the div */
+    background-color: rgb(51, 51, 51); /* Background color for the div */
     box-sizing: border-box;
 }
 
 /* Default styles for all boxes */
 .main_container div {
-    background-color: #f0f0f0; /* Background color for items */
+    color:#ffffff;
+    background-color: rgb(51, 51, 51)!important; /* Background color for the div */
     box-sizing: border-box;
     width: 100%;
     height: auto;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
+}
+
+.roll_palette {
+    grid-column: span 4;
 }
 
 h1 {
@@ -41,13 +51,12 @@ h1 {
 /* Specific grid-area and spanning */
 .general_box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns, flexible widths */
-    grid-template-rows: auto;              /* Automatic row height */
-    gap: 20px;                             /* Space between grid items */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(4, auto);   /* Four rows, height adjusts to content */
     padding: 20px;                         /* Padding for the container */
-    background-color: rgb(255, 255, 255); /* Background color for the div */
+    background-color: rgb(51, 51, 51);    /* Background color for the div */
     box-sizing: border-box;                /* Include padding and border in width */
-    grid-column: span 2;
+    grid-column: span 2;                   /* This might be unnecessary unless used in a larger grid */
 }
 
 .bottom-right-image {
@@ -57,6 +66,31 @@ h1 {
     align-self: end;                      /* Align to the end of the row */
     width: 200px;                         /* Adjust width as needed */
     height: auto;                         /* Maintain aspect ratio */
+}
+
+.button-item {
+    grid-column: 2;           /* Position the button in the second column */
+    grid-row: 4;              /* Position the button in the fourth row */
+    padding: 10px 20px;       /* Add padding for better appearance */
+    background-color: rgb(51, 51, 51);  /* Green background color */
+    color: white;             /* White text color */
+    border: none;             /* No border */
+    border-radius: 5px;      /* Rounded corners */
+}
+
+.attr_label {
+    cursor: pointer;                   /* Change cursor to pointer to indicate it's clickable */
+    background-color: #4CAF50;        /* Green background color */
+    color: white;                     /* White text color */
+    padding: 10px;                    /* Padding for a button-like appearance */
+    margin-bottom: 5px;               /* Space below each label */
+    border-radius: 5px;               /* Rounded corners */
+    text-align: center;                /* Center the text */
+    display: inline-block;            /* Allow the label to behave like a block */
+}
+
+.attr_label:hover {
+    background-color: #45a049;        /* Darker green on hover */
 }
 
 .attr_armor_box {
@@ -69,11 +103,31 @@ h1 {
     border-right: 15px solid black;   /* Right border */
     border-bottom: 15px solid black;  /* Bottom border */
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    grid-template-rows: repeat(2, auto);    /* 2 rows that adjust to content */
+    grid-template-columns: repeat(9, 1fr); /* 9 equal columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows that adjust to content */
     gap: 10px;                            /* Space between grid items */
-    padding: 10px;                       /* Padding for the box */
-    box-sizing: border-box;              /* Include padding and border in width */
+    padding: 10px;                        /* Padding for the box */
+    box-sizing: border-box;               /* Include padding and border in width */
+}
+
+.attr_stat_input {
+    width: 100%;                     /* Full width of the grid item */
+    height: auto;                    /* Allow height to adjust to content */
+    padding: 5px;                    /* Padding inside the input */
+    box-sizing: border-box;           /* Include padding in input size */
+    white-space: nowrap;              /* Prevent text wrapping */
+    overflow: visible;                /* Ensure full text is visible */
+    font-family: inherit;             /* Use the parent's font */
+}
+
+.attr_mod_input {
+    width: 100%;                     /* Full width of the grid item */
+    height: auto;                    /* Allow height to adjust to content */
+    padding: 5px;                    /* Padding inside the input */
+    box-sizing: border-box;           /* Include padding in input size */
+    white-space: nowrap;              /* Prevent text wrapping */
+    overflow: visible;                /* Ensure full text is visible */
+    font-family: inherit;             /* Use the parent's font */
 }
 
 .attr_ {
@@ -112,22 +166,49 @@ h1 {
     grid-column: span 2; /* Span 2 columns */
 }
 
+textarea.attr_allies_box_input {
+    width: 100%;                     /* Full width of the parent */
+    height: 75% !important;                    /* Full height of the parent */
+    padding: 10px;                   /* Padding inside the textarea */
+    background: rgb(51, 51, 51);     /* Set a dark background color */
+    border: 1px solid #ffffff;       /* Add a white border */
+    box-sizing: border-box;          /* Include padding in width/height calculations */
+    resize: none;                    /* Prevent manual resizing by the user */
+    line-height: 1.5;                /* Set line-height for readability */
+    font-family: inherit;            /* Inherit font family */
+    color: #ffffff;                  /* Set text color */
+    min-height: 60px;                /* Minimum height */
+    max-height: 300px;               /* Maximum height */
+    overflow-y: auto;                /* Enable vertical scrolling if needed */
+    word-wrap: break-word;           /* Ensure text wraps inside the box */
+    white-space: pre-wrap;           /* Maintain paragraph-like formatting with wrapping */
+}
+
 .stacked_items {
     grid-column: span 2;
     display: flex;
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center items vertically */
     height: 100%; /* Fill the entire height of the grid cell */
+    width: 100%; /* Allow the box to take full width if needed */
 }
 
 .stacked_item {
-    margin: 5px 0; /* Space between stacked items */
-    padding: 10px;
+    display: block; /* Ensure the element behaves as a block */
+    word-wrap: break-word; /* Ensure long words wrap inside the box */
+    overflow-wrap: break-word; /* For more modern browsers */
+    width: auto; /* Let the width adjust automatically */
+    min-width: 200px; /* Set a reasonable minimum width */
+    height: auto; /* Allow the height to expand with content */
+    min-height: 50px; /* Set a minimum height for the box */
+    padding: 10px; /* Add some padding to give space around text */
+    background-color: #f0f0f0; /* Optional background color */
+    border: 1px solid #ccc; /* Optional border for clarity */
 }
 
 .attr_study_box {
     border-top: 15px solid black;
-    grid-column: 4;
+    grid-column: span 4;
 }
 
 .attr_jackofalltrades {
@@ -140,11 +221,12 @@ h1 {
     grid-row: span 1; /* Single row in the main grid */
     display: grid; /* Set up a nested grid */
     grid-template-columns: repeat(6, 1fr); /* Nested grid with 6 equal columns */
-    grid-template-rows: repeat(17); /* 17 rows, each 30px tall */
+    grid-template-rows: repeat(17, 1fr); /* 17 rows, each 30px tall */
     width: 100%; /* Full width of the parent container */
     height: max-content; /* Auto height for flexibility */
     column-gap: 10px; /* Space between columns */
-    row-gap: 5px; /* Space between rows */
+    row-gap: 10px; /* Space between rows */
+    grid-auto-flow: column; /* Flow items into columns first */
 }
 
 /* Each grid item */
@@ -156,6 +238,7 @@ h1 {
     max-height: 100%;
     overflow: hidden; /* Prevent any overflow of content */
     padding: 5px; /* Optional: Add some padding for spacing */
+    height: max-content;
 }
 
 .attr_grid_item_2 {
@@ -234,3 +317,55 @@ fieldset {
     gap: 10px; /* Optional: Adjust gap between items */
 }
 
+/* General Styles for Blank Sections */
+.blank-section {
+    display: grid;                   /* Enable grid layout */
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    padding: 0;                      /* Remove padding */
+    box-sizing: border-box;           /* Include padding and border in width/height */
+    height: 200px;                   /* Fixed height for the container */
+}
+
+.textarea {
+    width: 100%;                     /* Full width of the parent */
+    padding: 10px;                   /* Padding inside the textarea */
+    background: rgb(51, 51, 51);   /* Set a light background color */
+    border: 1px solid #ffffff;            /* Add a border */
+    box-sizing: border-box;           /* Include padding in width */
+    resize: none;                    /* Prevent manual resizing */
+    line-height: 1.5;                /* Set line-height for readability */
+    font-family: inherit;            /* Inherit font family */
+    color: #ffffff;                     /* Set text color */
+    min-height: 60px;                /* Minimum height to show at least 2 lines */
+    max-height: 300px;               /* Maximum height to limit expansion */
+    overflow: visible;                  /* Allow scrolling if text exceeds */
+    word-wrap: normal;
+}
+
+.notable_ability {
+    width: 100%;         /* Ensures the textarea fills its container */
+    height: 150px;       /* Set a visible height */
+    padding: 10px;       /* Adds some padding inside */
+    box-sizing: border-box; /* Includes padding and borders in the element's width and height */
+}
+
+.misc_box {
+    display: grid;
+    grid-template-columns: 1fr;    /* Single column that takes up full width */
+    grid-template-rows: repeat(5, auto); /* Rows adjust height automatically */
+    gap: 10px;                     /* Space between the grid items */
+    width: 100%;                   /* Full width of the parent container */
+    grid-column: span 4;
+    color: white !important;
+}
+
+.stacked_item_2 {
+    border: 1px solid #ccc;        /* Border for visual reference */
+    padding: 10px;                 /* Padding inside the item */
+    box-sizing: border-box;        /* Include padding in width/height */
+    width: 100%;                   /* Ensure each item takes full width */
+}
+
+.attr_grid_item.sub_skill {
+    background-color: grey !important;
+}
