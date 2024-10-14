@@ -1,3 +1,11 @@
+.characterSheet {
+    box-sizing: border-box;
+    padding: 20px; /* Add padding if needed */
+    min-height: 600px; /* Set minimum height */
+    min-width: 400px; /* Set minimum width */
+}
+
+
 input, 
 select {
     color: rgb(255, 255, 255) !important;           /* Set text color */
@@ -6,36 +14,53 @@ select {
     box-sizing: border-box;            /* Include padding and border in total width */
     padding: 8px;                      /* Add padding for better appearance */
     font: inherit;                     /* Inherit font styles from the parent */
-    background: rgb(51, 51, 51);   /* Set a light background color */
+    background: rgb(17, 17, 17);   /* Set a light background color */
     border-radius: 4px;                /* Optional: add some border-radius */
     overflow: hidden;                  /* Prevent overflow of text */
     white-space: nowrap;               /* Prevent text wrapping for input fields */
     text-overflow: ellipsis;           /* Show ellipsis if text overflows */
 }
 
+.child {
+    flex: 1 1 auto; /* Allow child to grow and shrink */
+    min-height: 100px; /* Minimum height for each child */
+    padding: 10px; /* Padding for spacing */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+label {
+    font-size: 10px !important;
+}
+
 textarea {
     color: white;
-    background: rgb(51, 51, 51);   /* Set a light background color */  
+    background: rgb(17, 17, 17);   /* Set a light background color */  
 }
 
 .main_container {
     display: grid;
+    outline: 1px solid white;
     grid-template-columns: repeat(4, 1fr); /* 4 columns, flexible widths */
     grid-template-rows: repeat(12, auto); /* Auto-sized rows */
     padding: 20px;
-    background-color: rgb(51, 51, 51); /* Background color for the div */
+    background-color: rgb(17, 17, 17); /* Background color for the div */
     box-sizing: border-box;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: stretch; /* Stretch items to fill the row height */
 }
 
 /* Default styles for all boxes */
 .main_container div {
     color:#ffffff;
-    background-color: rgb(51, 51, 51)!important; /* Background color for the div */
+    background-color: rgb(17, 17, 17) !important; /* Background color for the div */
     box-sizing: border-box;
     width: 100%;
-    height: auto;
-    align-items: center; /* Center content vertically */
+    align-items: stretch; /* Stretch items to fill the row height */
     justify-content: center; /* Center content horizontally */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Soft drop shadow */
+    border-radius: 8px; /* Rounds the corners by 20px */
+    border-color: 3px solid white;
 }
 
 .roll_palette {
@@ -51,31 +76,40 @@ h1 {
 /* Specific grid-area and spanning */
 .general_box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    grid-template-rows: repeat(4, auto);   /* Four rows, height adjusts to content */
+    grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(2, auto);   /* Four rows, height adjusts to content */
     padding: 20px;                         /* Padding for the container */
-    background-color: rgb(51, 51, 51);    /* Background color for the div */
+    background-color: rgb(17, 17, 17);    /* Background color for the div */
     box-sizing: border-box;                /* Include padding and border in width */
-    grid-column: span 2;                   /* This might be unnecessary unless used in a larger grid */
+    grid-column: span 1;
 }
 
-.bottom-right-image {
-    grid-column: 2;                       /* Place in the second column */
-    grid-row: 2;                          /* Place in the second row */
-    justify-self: end;                    /* Align to the end of the column */
-    align-self: end;                      /* Align to the end of the row */
+.example-image {
     width: 200px;                         /* Adjust width as needed */
     height: auto;                         /* Maintain aspect ratio */
+    grid-column: 1;
+    grid-row: 2;
 }
 
-.button-item {
-    grid-column: 2;           /* Position the button in the second column */
-    grid-row: 4;              /* Position the button in the fourth row */
-    padding: 10px 20px;       /* Add padding for better appearance */
-    background-color: rgb(51, 51, 51);  /* Green background color */
-    color: white;             /* White text color */
-    border: none;             /* No border */
-    border-radius: 5px;      /* Rounded corners */
+button {
+    background-color: rgb(17, 17, 17); /* Dark gray background color */
+    color: white;                     /* White text color */
+    border: none;                     /* No border */
+    border-radius: 5px;              /* Rounded corners */
+    font-size: 10px !important;                  /* Increase font size for better readability */
+    cursor: pointer;                  /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+button:hover {
+    background-color: rgb(17, 17, 17); /* Darker shade on hover */
+}
+
+button:hover, .clickable-div:hover {
+    background-color: rgb(17, 17, 17); /* Darker on hover */
+}
+.clickable-div {
+    cursor: pointer; /* Cursor pointer for div */
 }
 
 .attr_label {
@@ -94,20 +128,19 @@ h1 {
 }
 
 .attr_armor_box {
-    border-left: 15px solid black;
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 1;
 }
 
 .attr_statsandmods_box {
-    border-right: 15px solid black;   /* Right border */
-    border-bottom: 15px solid black;  /* Bottom border */
     display: grid;
     grid-template-columns: repeat(9, 1fr); /* 9 equal columns */
-    grid-template-rows: repeat(2, auto);   /* 2 rows that adjust to content */
+    grid-template-rows: repeat(2, 50px);   /* 2 rows that adjust to content */
     gap: 10px;                            /* Space between grid items */
     padding: 10px;                        /* Padding for the box */
     box-sizing: border-box;               /* Include padding and border in width */
+    grid-row: 2;
+    grid-column: span 4;
 }
 
 .attr_stat_input {
@@ -155,22 +188,18 @@ h1 {
 }
 
 .attr_finances_box {
-    border-right: 15px solid black;
-    border-left: 15px solid black;
-    border-bottom: 15px solid black; 
     grid-column: span 1;
     grid-row: span 1;
 }
 
 .attr_allies_box {
-    grid-column: span 2; /* Span 2 columns */
+    grid-column: span 1; /* Span 2 columns */
 }
 
-textarea.attr_allies_box_input {
+textarea {
     width: 100%;                     /* Full width of the parent */
-    height: 75% !important;                    /* Full height of the parent */
     padding: 10px;                   /* Padding inside the textarea */
-    background: rgb(51, 51, 51);     /* Set a dark background color */
+    background: rgb(17, 17, 17);     /* Set a dark background color */
     border: 1px solid #ffffff;       /* Add a white border */
     box-sizing: border-box;          /* Include padding in width/height calculations */
     resize: none;                    /* Prevent manual resizing by the user */
@@ -207,7 +236,6 @@ textarea.attr_allies_box_input {
 }
 
 .attr_study_box {
-    border-top: 15px solid black;
     grid-column: span 4;
 }
 
@@ -223,7 +251,7 @@ textarea.attr_allies_box_input {
     grid-template-columns: repeat(6, 1fr); /* Nested grid with 6 equal columns */
     grid-template-rows: repeat(17, 1fr); /* 17 rows, each 30px tall */
     width: 100%; /* Full width of the parent container */
-    height: max-content; /* Auto height for flexibility */
+    height: min-content; /* Auto height for flexibility */
     column-gap: 10px; /* Space between columns */
     row-gap: 10px; /* Space between rows */
     grid-auto-flow: column; /* Flow items into columns first */
@@ -262,24 +290,21 @@ fieldset {
 }
 
 .weapons_box {
-    grid-column: span 3; /* Spans across 3 columns */
-    border-top: 15px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;  
+    grid-column: span 3; /* Spans across 3 columns */ 
+    grid-template-columns: 1fr repeat(5, min-content);
 }
 
 .repeating_weapon {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 60px);
     grid-column: span 3;
     grid-row: span 1;
+    border: 1px solid white;
+    box-shadow: none !important;
 }
 
 .repeating_augments-box {
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: 4;
@@ -294,6 +319,7 @@ fieldset {
 }
 
 .repeating_equipment-box {
+
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto; /* 7 auto columns */
     grid-column: 1 / -1; /* Span all columns */
@@ -303,9 +329,6 @@ fieldset {
 
 .equipment_box {
     grid-column: span 4; /* Spans across 3 columns */
-    border-top: 15px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
 }
 
 .repeating_equipment {
@@ -329,7 +352,7 @@ fieldset {
 .textarea {
     width: 100%;                     /* Full width of the parent */
     padding: 10px;                   /* Padding inside the textarea */
-    background: rgb(51, 51, 51);   /* Set a light background color */
+    background: rgb(17, 17, 17);   /* Set a light background color */
     border: 1px solid #ffffff;            /* Add a border */
     box-sizing: border-box;           /* Include padding in width */
     resize: none;                    /* Prevent manual resizing */
@@ -368,4 +391,19 @@ fieldset {
 
 .attr_grid_item.sub_skill {
     background-color: grey !important;
+}
+
+.attr_grid_item.sub_skill input {
+    background-color: grey !important; /* Same as background */
+}
+
+.sheet-roll-modifier {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    box-sizing: border-box;           /* Include padding and border in width/height */
+}
+
+.radio_grid {
+    display: flex;
 }

@@ -1,7 +1,7 @@
 <div class="main_container">
 
-    <div class="general_box">
-        <img class="bottom-right-image"
+    <div class="general_box child">
+        <img class="example-image"
             src="https://raw.githubusercontent.com/rgillooly/Traveller-Character-Sheet-For-Roll20/main/Score%20Calc%20Logo.png"
             alt="Score Calc Logo">
         <div class="attr_general_stats">
@@ -35,7 +35,7 @@
 
     </div>
 
-    <div class="attr_armor_box">
+    <div class="attr_armor_box child">
         <h1 style="color: maroon; background-color: black;">Armour</h1>
         <label for="attr_armor_type_field">Armor Type:</label>
         <input type="text" class="attr_armor_type_input" id="attr_armor_type_field" name="attr_armor_type_field">
@@ -51,33 +51,48 @@
             name="attr_armor_options_field">
     </div>
 
-    <div class="attr_statsandmods_box">
+    <div class="attr_statsandmods_box child">
         <button type="roll" name="roll_2d6" value="/roll 2d6 + @{strength_mod}">Strength:</button>
         <input type="number" class="attr_stat_input" id="attr_strength_field" name="attr_strength" placeholder="score">
-        <input type="number" class="attr_mod_input" id="attr_strength_mod_field" name="attr_strength_mod" placeholder="mod">
-    
+        <input type="number" class="attr_mod_input" id="attr_strength_mod_field" name="attr_strength_mod"
+            placeholder="mod">
+
         <button type="roll" name="roll_2d6" value="/roll 2d6 + @{dexterity_mod}">Dexterity:</button>
-        <input type="number" class="attr_stat_input" id="attr_dexterity_field" name="attr_dexterity" placeholder="score">
-        <input type="number" class="attr_mod_input" id="attr_dexterity_mod_field" name="attr_dexterity_mod" placeholder="mod">
-    
+        <input type="number" class="attr_stat_input" id="attr_dexterity_field" name="attr_dexterity"
+            placeholder="score">
+        <input type="number" class="attr_mod_input" id="attr_dexterity_mod_field" name="attr_dexterity_mod"
+            placeholder="mod">
+
         <button type="roll" name="roll_2d6" value="/roll 2d6 + @{endurance_mod}">Endurance:</button>
-        <input type="number" class="attr_stat_input" id="attr_endurance_field" name="attr_endurance" placeholder="score">
-        <input type="number" class="attr_mod_input" id="attr_endurance_mod_field" name="attr_endurance_mod" placeholder="mod">
-    
+        <input type="number" class="attr_stat_input" id="attr_endurance_field" name="attr_endurance"
+            placeholder="score">
+        <input type="number" class="attr_mod_input" id="attr_endurance_mod_field" name="attr_endurance_mod"
+            placeholder="mod">
+
         <button type="roll" name="roll_2d6" value="/roll 2d6 + @{intellect_mod}">Intellect:</button>
-        <input type="number" class="attr_stat_input" id="attr_intellect_field" name="attr_intellect" placeholder="score">
-        <input type="number" class="attr_mod_input" id="attr_intellect_mod_field" name="attr_intellect_mod" placeholder="mod">
-    
+        <input type="number" class="attr_stat_input" id="attr_intellect_field" name="attr_intellect"
+            placeholder="score">
+        <input type="number" class="attr_mod_input" id="attr_intellect_mod_field" name="attr_intellect_mod"
+            placeholder="mod">
+
         <button type="roll" name="roll_2d6" value="/roll 2d6 + @{education_mod}">Education:</button>
-        <input type="number" class="attr_stat_input" id="attr_education_field" name="attr_education" placeholder="score">
-        <input type="number" class="attr_mod_input" id="attr_education_mod_field" name="attr_education_mod" placeholder="mod">
-    
+        <input type="number" class="attr_stat_input" id="attr_education_field" name="attr_education"
+            placeholder="score">
+        <input type="number" class="attr_mod_input" id="attr_education_mod_field" name="attr_education_mod"
+            placeholder="mod">
+
         <button type="roll" name="roll_2d6" value="/roll 2d6 + @{social_mod}">Social:</button>
         <input type="number" class="attr_stat_input" id="attr_social_field" name="attr_social" placeholder="score">
         <input type="number" class="attr_mod_input" id="attr_social_mod_field" name="attr_social_mod" placeholder="mod">
-    </div>       
+    </div>
 
-    <div class="attr_finances_box">
+    <div class="attr_allies_box child">
+        <h1>Allies, Contacts, Enemies, Rivals</h1>
+        <textarea type="text" class="attr_allies_box_input" id="attr_allies_box_field"
+            name="attr_allies_box_field"></textarea>
+    </div>
+
+    <div class="attr_finances_box child">
         <h1 style="color: maroon; background-color: black;">Finances</h1>
         <label for="attr_finances_pension_field">Pension:</label>
         <input type="text" class="attr_finances_pension_input" id="attr_finances_pension_field"
@@ -95,27 +110,24 @@
         <input type="text" class="attr_finances_livingcost_input" id="attr_finances_livingcost_field"
             name="attr_finances_livingcost_field">
     </div>
-        <div class="attr_allies_box">
-            <h1>Allies, Contacts, Enemies, Rivals</h1>
-            <textarea type="text" class="attr_allies_box_input" id="attr_allies_box_field" name="attr_allies_box_field"></textarea>
-        </div>
-        <div class="attr_study_box">
-            <h1 style="color: maroon; background-color: black;">Study Period</h1>
-            <label for="attr_study_traininginskill_field">Training in Skill:</label>
-            <input type="text" class="attr_study_traininginskill_input" name="attr_study-traininginskill-field">
-            <label for="attr_study_weeksdone_field">Weeks Done:</label>
-            <input type="text" class="attr_study_weeksdone_input" id="attr_study_weeksdone_field"
-                name="attr_study_weeksdone_field">
-            <label for="attr_study_weekstotal_field">Weeks Total:</label>
-            <input type="text" class="attr_study_weekstotal_input" id="attr_study_weekstotal_field"
-                name="attr_study_weekstotal_field">
-            <label for="attr_study_perriodscomplete_field">Periods Complete:</label>
-            <input type="text" class="attr_study_periodscomplete_input" id="attr_study_perriodscomplete_field"
-                name="attr_study_perriodscomplete_field">
-        </div>
+
+    <div class="attr_study_box child">
+        <h1 style="color: maroon; background-color: black;">Study Period</h1>
+        <label for="attr_study_traininginskill_field">Training in Skill:</label>
+        <input type="text" class="attr_study_traininginskill_input" name="attr_study-traininginskill-field">
+        <label for="attr_study_weeksdone_field">Weeks Done:</label>
+        <input type="text" class="attr_study_weeksdone_input" id="attr_study_weeksdone_field"
+            name="attr_study_weeksdone_field">
+        <label for="attr_study_weekstotal_field">Weeks Total:</label>
+        <input type="text" class="attr_study_weekstotal_input" id="attr_study_weekstotal_field"
+            name="attr_study_weekstotal_field">
+        <label for="attr_study_perriodscomplete_field">Periods Complete:</label>
+        <input type="text" class="attr_study_periodscomplete_input" id="attr_study_perriodscomplete_field"
+            name="attr_study_perriodscomplete_field">
+    </div>
 
 
-    <div class="attr_jackofalltrades">
+    <div class="attr_jackofalltrades child">
         <div class="attr_skills_jackofalltrades_item">
             <h1 style="color: maroon; background-color: black;">Skills:</h1>
             <label for="attr_study_jackofalltrades_field">Jack of All Trades:</label>
@@ -129,527 +141,693 @@
         </div>
     </div>
 
-    <div class="roll_palette">
-        <button type="roll" name="roll_2d6 - 3" value="/roll 2d6 - 3">Roll 2d6 - 3</button>
-        <button type="roll" name="roll_2d6 - 2" value="/roll 2d6 - 2">Roll 2d6 - 2</button>
-        <button type="roll" name="roll_2d6 - 1" value="/roll 2d6 - 1">Roll 2d6 - 1</button>
-        <button type="roll" name="roll_2d6" value="/roll 2d6">Roll 2d6</button>
-        <button type="roll" name="roll_2d6 + 1" value="/roll 2d6 + 1">Roll 2d6 + 1</button>
-        <button type="roll" name="roll_2d6 + 2" value="/roll 2d6 + 2">Roll 2d6 + 2</button>
-        <button type="roll" name="roll_2d6 + 3" value="/roll 2d6 + 3">Roll 2d6 + 3</button>
+    <input type="hidden" name="attr_current_modifier" value="0">
+
+    <div class="sheet-roll-modifier child">
+        <div class="radio_grid">
+            <label>
+                <input type="radio" name="attr_roll_modifier" value="0" checked /> No Modifier
+            </label>
+        </div>
+        <div class="radio_grid">
+            <label>
+                <input type="radio" name="attr_roll_modifier" value="strength_mod" /> Strength
+            </label>
+        </div>
+        <div class="radio_grid">
+            <label>
+                <input type="radio" name="attr_roll_modifier" value="dexterity_mod" /> Dexterity
+            </label>
+        </div>
+        <div class="radio_grid">
+            <label>
+                <input type="radio" name="attr_roll_modifier" value="endurance_mod" /> Endurance
+            </label>
+        </div>
+        <div class="radio_grid">
+            <label>
+                <input type="radio" name="attr_roll_modifier" value="intellect_mod" /> Intellect
+            </label>
+        </div>
+        <div class="radio_grid">
+            <label>
+                <input type="radio" name="attr_roll_modifier" value="education_mod" /> Education
+            </label>
+        </div>
+        <div class="radio_grid">
+            <label>
+                <input type="radio" name="attr_roll_modifier" value="social_mod" /> Social
+            </label>
+        </div>
     </div>
 
-    <div class="attr_skills_box">
+    <div class="roll_palette child">
+        <button type="roll" name="roll_2d6 - 3" value="/roll 2d6 - 3 + @{current_modifier}">2d6 - 3</button>
+        <button type="roll" name="roll_2d6 - 2" value="/roll 2d6 - 2 + @{current_modifier}">2d6 - 2</button>
+        <button type="roll" name="roll_2d6 - 1" value="/roll 2d6 - 1 + @{current_modifier}">2d6 - 1</button>
+        <button type="roll" name="roll_2d6" value="/roll 2d6 + @{current_modifier}">2d6</button>
+        <button type="roll" name="roll_2d6 + 1" value="/roll 2d6 + 1 + @{current_modifier}">2d6 + 1</button>
+        <button type="roll" name="roll_2d6 + 2" value="/roll 2d6 + 2 + @{current_modifier}">2d6 + 2</button>
+        <button type="roll" name="roll_2d6 + 3" value="/roll 2d6 + 3 + @{current_modifier}">2d6 + 3</button>
+    </div>
+
+    <div class="attr_skills_box child">
         <div class="attr_grid_item">
-            <label for="attr_study_admin_field">Admin:</label>
+            <button type="roll" class="attr_study_admin_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_admin_field}">Admin:</button>
             <input type="text" class="attr_skills_admin_input" id="attr_study_admin_field"
                 name="attr_study_admin_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_advocate_field">Advocate:</label>
+            <button type="roll" class="attr_study_advocate_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_advocate_field}">Advocate:</button>
             <input type="text" class="attr_skills_advocate_input" id="attr_study_advocate_field"
                 name="attr_study_advocate_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_animals_field">Animals:</label>
+            <button type="roll" class="attr_study_animals_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_animals_field}">Animals:</button>
             <input type="text" class="attr_skills_animals_input" id="attr_study_animals_field"
                 name="attr_study_animals_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_handling_field">Handling:</label>
+            <button type="roll" class="attr_study_handling_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_handling_field}">Handling:</button>
             <input type="text" class="attr_skills_handling_input" id="attr_study_handling_field"
                 name="attr_study_handling_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_training_field">Training:</label>
+            <button type="roll" class="attr_study_training_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_training_field}">Training:</button>
             <input type="text" class="attr_skills_training_input" id="attr_study_training_field"
                 name="attr_study_training_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_veterinary_field">Veterinary:</label>
+            <button type="roll" class="attr_study_veterinary_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_veterinary_field}">Veterinary:</button>
             <input type="text" class="attr_skills_veterinary_input" id="attr_study_veterinary_field"
                 name="attr_study_veterinary_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_art_field">Art:</label>
+            <button type="roll" class="attr_study_art_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_art_field}">Art:</button>
             <input type="text" class="attr_skills_art_input" id="attr_study_art_field" name="attr_study_art_field">
         </div>
-        <div class="attr_grid_item sub_skill">
-            <label for="attr_study_art1_field">Art 1:</label>
+        <div class="attr_grid_item sub_skill">>
+            <button type="roll" class="attr_study_art1_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_art1_field}">Art1:</button>
             <input type="text" class="attr_skills_art1_input" id="attr_study_art1_field" name="attr_study_art1_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_art2_field">Art 2:</label>
+            <button type="roll" class="attr_study_art2_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_art2_field}">Art2:</button>
             <input type="text" class="attr_skills_art2_input" id="attr_study_art2_field" name="attr_study_art2_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_art3_field">Art 3:</label>
+            <button type="roll" class="attr_study_art3_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_art3_field}">Art3:</button>
             <input type="text" class="attr_skills_art3_input" id="attr_study_art3_field" name="attr_study_art3_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_astrogation_field">Astrogation:</label>
+            <button type="roll" class="attr_study_astrogation_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_astrogation_field}">Astrogation:</button>
             <input type="text" class="attr_skills_astrogation_input" id="attr_study_astrogation_field"
                 name="attr_study_astrogation_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_athletics_field">Athletics:</label>
+            <button type="roll" class="attr_study_athletics_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_athletics_field}">Athletics:</button>
             <input type="text" class="attr_skills_athletics_input" id="attr_study_athletics_field"
                 name="attr_study_athletics_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_dexterity_field">Dexterity:</label>
+            <button type="roll" class="attr_study_dexterity_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_dexterity_field}">Dexterity:</button>
             <input type="text" class="attr_skills_dexterity_input" id="attr_study_dexterity_field"
                 name="attr_study_dexterity_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_endurance_field">Endurance:</label>
+            <button type="roll" class="attr_study_endurance_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_endurance_field}">Endurance:</button>
             <input type="text" class="attr_skills_endurance_input" id="attr_study_endurance_field"
                 name="attr_study_endurance_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_strength_field">Strength:</label>
+            <button type="roll" class="attr_study_strength_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_strength_field}">Strength:</button>
             <input type="text" class="attr_skills_strength_input" id="attr_study_strength_field"
                 name="attr_study_strength_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_broker_field">Broker:</label>
+            <button type="roll" class="attr_study_broker_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_broker_field}">Broker:</button>
             <input type="text" class="attr_skills_broker_input" id="attr_study_broker_field"
                 name="attr_study_broker_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_carouse_field">Carouse:</label>
+            <button type="roll" class="attr_study_carouse_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_carouse_field}">Carouse:</button>
             <input type="text" class="attr_skills_carouse_input" id="attr_study_carouse_field"
                 name="attr_study_carouse_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_deception_field">Deception:</label>
+            <button type="roll" class="attr_study_deception_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_deception_field}">Deception:</button>
             <input type="text" class="attr_skills_deception_input" id="attr_study_deception_field"
                 name="attr_study_deception_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_diplomat_field">Diplomat:</label>
+            <button type="roll" class="attr_study_diplomat_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_diplomat_field}">Diplomat:</button>
             <input type="text" class="attr_skills_diplomat_input" id="attr_study_diplomat_field"
                 name="attr_study_diplomat_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_drive_field">Drive:</label>
+            <button type="roll" class="attr_study_drive_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_drive_field}">Drive:</button>
             <input type="text" class="attr_skills_drive_input" id="attr_study_drive_field"
                 name="attr_study_drive_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_hovercraft_field">Hovercraft:</label>
+            <button type="roll" class="attr_study_hovercraft_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_hovercraft_field}">Hovercraft:</button>
             <input type="text" class="attr_skills_hovercraft_input" id="attr_study_hovercraft_field"
                 name="attr_study_hovercraft_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_mole_field">Mole:</label>
+            <button type="roll" class="attr_study_mole_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_mole_field}">Mole:</button>
             <input type="text" class="attr_skills_mole_input" id="attr_study_mole_field" name="attr_study_mole_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_tracked_field">Tracked:</label>
+            <button type="roll" class="attr_study_tracked_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_tracked_field}">Tracked:</button>
             <input type="text" class="attr_skills_tracked_input" id="attr_study_tracked_field"
                 name="attr_study_tracked_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_walker_field">Walker:</label>
+            <button type="roll" class="attr_study_walker_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_walker_field}">Walker:</button>
             <input type="text" class="attr_skills_walker_input" id="attr_study_walker_field"
                 name="attr_study_walker_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_wheeled_field">Wheeled:</label>
+            <button type="roll" class="attr_study_wheeled_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_wheeled_field}">Wheeled:</button>
             <input type="text" class="attr_skills_wheeled_input" id="attr_study_wheeled_field"
                 name="attr_study_wheeled_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_electronics_field">Electronics:</label>
+            <button type="roll" class="attr_study_electronics_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_electronics_field}">Electronics:</button>
             <input type="text" class="attr_skills_electronics_input" id="attr_study_electronics_field"
                 name="attr_study_electronics_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_comms_field">Comms:</label>
+            <button type="roll" class="attr_study_comms_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_comms_field}">Comms:</button>
             <input type="text" class="attr_skills_comms_input" id="attr_study_comms_field"
                 name="attr_study_comms_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_computers_field">Computers:</label>
+            <button type="roll" class="attr_study_computer_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_computers_field}">Computer:</button>
             <input type="text" class="attr_skills_computers_input" id="attr_study_computers_field"
                 name="attr_study_computers_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_remote_ops_field">Remote Ops:</label>
+            <button type="roll" class="attr_study_remote_ops_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_remote_ops_field}">Remote Ops:</button>
             <input type="text" class="attr_skills_remote_ops_input" id="attr_study_remote_ops_field"
                 name="attr_study_remote_ops_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_sensors_field">Sensors:</label>
+            <button type="roll" class="attr_study_sensors_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_sensors_field}">Sensors:</button>
             <input type="text" class="attr_skills_sensors_input" id="attr_study_sensors_field"
                 name="attr_study_sensors_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_engineer_field">Engineer:</label>
+            <button type="roll" class="attr_study_engineer_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_engineer_field}">Engineer:</button>
             <input type="text" class="attr_skills_engineer_input" id="attr_study_engineer_field"
                 name="attr_study_engineer_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_j_drive_field">J Drive:</label>
+            <button type="roll" class="attr_study_j_drive_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_j_drive_field}">J Drive::</button>
             <input type="text" class="attr_skills_j_drive_input" id="attr_study_j_drive_field"
                 name="attr_study_j_drive_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_life_support_field">Life Support:</label>
+            <button type="roll" class="attr_study_life_support_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_life_support_field}">Life Support:</button>
             <input type="text" class="attr_skills_life_support_input" id="attr_study_life_support_field"
                 name="attr_study_life_support_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_m_drive_field">M Drive:</label>
+            <button type="roll" class="attr_study_m_drive_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_m_drive_field}">M Drive:</button>
             <input type="text" class="attr_skills_m_drive_input" id="attr_study_m_drive_field"
                 name="attr_study_m_drive_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_power_plant_field">Power Plant:</label>
+            <button type="roll" class="attr_study_power_plant_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_power_plant_field}">Power Plant:</button>
             <input type="text" class="attr_skills_power_plant_input" id="attr_study_power_plant_field"
                 name="attr_study_power_plant_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_explosives_field">Explosives:</label>
+            <button type="roll" class="attr_study_explosives_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_explosives_field}">Explosives:</button>
             <input type="text" class="attr_skills_explosives_input" id="attr_study_explosives_field"
                 name="attr_study_explosives_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_flyer_field">Flyer:</label>
+            <button type="roll" class="attr_study_flyer_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_flyer_field}">Flyer:</button>
             <input type="text" class="attr_skills_flyer_input" id="attr_study_flyer_field"
                 name="attr_study_flyer_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_airship_field">Airship:</label>
+            <button type="roll" class="attr_study_airship_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_airship_field}">Airship:</button>
             <input type="text" class="attr_skills_airship_input" id="attr_study_airship_field"
                 name="attr_study_airship_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_grav_field">Grav:</label>
+            <button type="roll" class="attr_study_grav_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_grav_field}">Grav:</button>
             <input type="text" class="attr_skills_grav_input" id="attr_study_grav_field" name="attr_study_grav_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_ornithopter_field">Ornithopter:</label>
+            <button type="roll" class="attr_study_ornithopter_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_ornithopter_field}">Ornithopter:</button>
             <input type="text" class="attr_skills_ornithopter_input" id="attr_study_ornithopter_field"
                 name="attr_study_ornithopter_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_rotor_field">Rotor:</label>
+            <button type="roll" class="attr_study_rotor_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_rotor_field}">Rotor:</button>
             <input type="text" class="attr_skills_rotor_input" id="attr_study_rotor_field"
                 name="attr_study_rotor_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_wing_field">Wing:</label>
+            <button type="roll" class="attr_study_wing_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_wing_field}">Wing:</button>
             <input type="text" class="attr_skills_wing_input" id="attr_study_wing_field" name="attr_study_wing_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_gambler_field">Gambler:</label>
+            <button type="roll" class="attr_study_gambler_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_gambler_field}">Gambler:</button>
             <input type="text" class="attr_skills_gambler_input" id="attr_study_gambler_field"
                 name="attr_study_gambler_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_gunner_field">Gunner:</label>
+            <button type="roll" class="attr_study_gunner_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_gunner_field}">Gunner:</button>
             <input type="text" class="attr_skills_gunner_input" id="attr_study_gunner_field"
                 name="attr_study_gunner_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_capital_field">Capital:</label>
+            <button type="roll" class="attr_study_capital_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_capital_field}">Capital:</button>
             <input type="text" class="attr_skills_capital_input" id="attr_study_capital_field"
                 name="attr_study_capital_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_ortillery_field">Ortillery:</label>
+            <button type="roll" class="attr_study_ortillery_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_ortillery_field}">Ortillery:</button>
             <input type="text" class="attr_skills_ortillery_input" id="attr_study_ortillery_field"
                 name="attr_study_ortillery_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_screen_field">Screen:</label>
+            <button type="roll" class="attr_study_screen_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_screen_field}">Screen:</button>
             <input type="text" class="attr_skills_screen_input" id="attr_study_screen_field"
                 name="attr_study_screen_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_turret_field">Turret:</label>
+            <button type="roll" class="attr_study_turret_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_turret_field}">Turret:</button>
             <input type="text" class="attr_skills_turret_input" id="attr_study_turret_field"
                 name="attr_study_turret_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_gun_combat_field">Gun Combat:</label>
+            <button type="roll" class="attr_study_gun_combat_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_gun_combat_field}">Gun Combat:</button>
             <input type="text" class="attr_skills_gun_combat_input" id="attr_study_gun_combat_field"
                 name="attr_study_gun_combat_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_archaic_field">Archaic:</label>
+            <button type="roll" class="attr_study_archaic_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_archaic_field}">Archaic:</button>
             <input type="text" class="attr_skills_archaic_input" id="attr_study_archaic_field"
                 name="attr_study_archaic_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_energy_field">Energy:</label>
+            <button type="roll" class="attr_study_energy_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_energy_field}">Energy:</button>
             <input type="text" class="attr_skills_energy_input" id="attr_study_energy_field"
                 name="attr_study_energy_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_slug_field">Slug:</label>
+            <button type="roll" class="attr_study_slug_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_slug_field}">Slug:</button>
             <input type="text" class="attr_skills_slug_input" id="attr_study_slug_field" name="attr_study_slug_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_gun1_field">Gun 1:</label>
+            <button type="roll" class="attr_study_gun1_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_gun1_field}">Gun1:</button>
             <input type="text" class="attr_skills_gun1_input" id="attr_study_gun1_field" name="attr_study_gun1_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_heavy_weapons_field">Heavy Weapons:</label>
+            <button type="roll" class="attr_study_heavy_weapons_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_heavy_weapons_field}">Heavy Weapons:</button>
             <input type="text" class="attr_skills_heavy_weapons_input" id="attr_study_heavy_weapons_field"
                 name="attr_study_heavy_weapons_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_artillery_field">Artillery:</label>
+            <button type="roll" class="attr_study_artillery_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_artillery_field}">Artillery:</button>
             <input type="text" class="attr_skills_artillery_input" id="attr_study_artillery_field"
                 name="attr_study_artillery_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_man_port_field">Man Port:</label>
+            <button type="roll" class="attr_study_man_port_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_man_port_field}">Man Port:</button>
             <input type="text" class="attr_skills_man_port_input" id="attr_study_man_port_field"
                 name="attr_study_man_port_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_vehicle_field">Vehicle:</label>
+            <button type="roll" class="attr_study_vehicle_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_vehicle_field}">Vehicle:</button>
             <input type="text" class="attr_skills_vehicle_input" id="attr_study_vehicle_field"
                 name="attr_study_vehicle_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_investigate_field">Investigate:</label>
+            <button type="roll" class="attr_study_investigate_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_investigate_field}">Investigate:</button>
             <input type="text" class="attr_skills_investigate_input" id="attr_study_investigate_field"
                 name="attr_study_investigate_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_language_field">Language:</label>
+            <button type="roll" class="attr_study_lang_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_language_field}">Language:</button>
             <input type="text" class="attr_skills_language_input" id="attr_study_language_field"
                 name="attr_study_language_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_lang1_field">Language 1:</label>
+            <button type="roll" class="attr_study_lang1_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_lang1_field}">Language 1:</button>
             <input type="text" class="attr_skills_lang1_input" id="attr_study_lang1_field"
                 name="attr_study_lang1_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_lang2_field">Language 2:</label>
+            <button type="roll" class="attr_study_lang2_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_lang2_field}">Language 2:</button>
             <input type="text" class="attr_skills_lang2_input" id="attr_study_lang2_field"
                 name="attr_study_lang2_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_lang3_field">Language 3:</label>
+            <button type="roll" class="attr_study_lang3_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_lang3_field}">Language 3:</button>
             <input type="text" class="attr_skills_lang3_input" id="attr_study_lang3_field"
                 name="attr_study_lang3_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_lang4_field">Language 4:</label>
+            <button type="roll" class="attr_study_lang4_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_lang4_field}">Language 4:</button>
             <input type="text" class="attr_skills_lang4_input" id="attr_study_lang4_field"
                 name="attr_study_lang4_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_knowledge_field">Leadership:</label>
+            <button type="roll" class="attr_study_leadership_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_leadership_field}">Leadership:</button>
             <input type="text" class="attr_skills_knowledge_input" id="attr_study_knowledge_field"
                 name="attr_study_knowledge_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_mehcanic_field">Mechanic:</label>
-            <input type="text" class="attr_skills_mechanic_input" id="attr_study_fighting_field"
+            <button type="roll" class="attr_study_mechanic_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_mechanic_field}">Mechanic:</button>
+            <input type="text" class="attr_skills_mechanic_input" id="attr_study_mechanic_field"
                 name="attr_study_mechanic_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_medic_field">Medic:</label>
+            <button type="roll" class="attr_study_medic_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_medic_field}">Medic:</button>
             <input type="text" class="attr_skills_medic_input" id="attr_study_medic_field"
                 name="attr_study_pilot_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_melee_field">Melee:</label>
+            <button type="roll" class="attr_study_melee_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_melee_field}">Melee:</button>
             <input type="text" class="attr_skills_melee_input" id="attr_study_melee_field"
                 name="attr_study_melee_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_blade_field">Blade:</label>
+            <button type="roll" class="attr_study_blade_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_blade_field}">Blade:</button>
             <input type="text" class="attr_skills_blade_input" id="attr_study_blade_field"
                 name="attr_study_blade_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_bludgeon_field">Bludgeon:</label>
+            <button type="roll" class="attr_study_bludgeon_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_bludgeon_field}">Bludgeon:</button>
             <input type="text" class="attr_skills_bludgeon_input" id="attr_study_bludgeon_field"
                 name="attr_study_bludgeon_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_natural_field">Natural:</label>
+            <button type="roll" class="attr_study_natural_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_natural_field}">Natural:</button>
             <input type="text" class="attr_skills_natural_input" id="attr_study_natural_field"
                 name="attr_study_natural_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_unarmed_field">Unarmed:</label>
+            <button type="roll" class="attr_study_unarmed_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_unarmed_field}">Unarmed:</button>
             <input type="text" class="attr_skills_unarmed_input" id="attr_study_unarmed_field"
                 name="attr_study_unarmed_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_pilot_field">Pilot:</label>
+            <button type="roll" class="attr_study_pilot_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_pilot_field}">Pilot:</button>
             <input type="text" class="attr_skills_pilot_input" id="attr_study_pilot_field"
                 name="attr_study_pilot_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_mech_field">Capital Ships:</label>
-            <input type="text" class="attr_skills_mech_input" id="attr_study_mech_field" name="attr_study_mech_field">
+            <button type="roll" class="attr_study_capital_ships_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_capital_ships_field}">Capital Ships:</button>
+            <input type="text" class="attr_skills_mech_input" id="attr_study_capital_ships_field"
+                name="attr_study_capital_ships_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_understanding_field">Small Craft:</label>
-            <input type="text" class="attr_skills_understanding_input" id="attr_study_understanding_field"
-                name="attr_study_understanding_field">
+            <button type="roll" class="attr_study_small_craft_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_small_craft_field}">Small Craft:</button>
+            <input type="text" class="attr_skills_understanding_input" id="attr_study_small_craft_field"
+                name="attr_study_small_craft_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_medicine_field">Spacecraft:</label>
-            <input type="text" class="attr_skills_medicine_input" id="attr_study_medicine_field"
-                name="attr_study_medicine_field">
+            <button type="roll" class="attr_study_spacecraft_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_spacecraft_field}">Spacecraft:</button>
+            <input type="text" class="attr_skills_spacecraft_input" id="attr_study_spacecraft_field"
+                name="attr_study_spacecraft_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_science_field">Profession:</label>
+            <div class="attr_grid_item sub_skill">
+                <button type="roll" class="attr_study_profession_field"
+                    value="/roll 2d6 + @{current_modifier} + @{study_profession_field}">Profession:</button>
+                <input type="text" class="attr_skills_profession_input" id="attr_study_profession_field"
+                    name="attr_study_profession_field">
+            </div>
+        </div>
+        <div class="attr_grid_item">
+            <div class="attr_grid_item sub_skill">
+                <button type="roll" class="attr_study_profession1_field"
+                    value="/roll 2d6 + @{current_modifier} + @{study_profession1_field}">Profession 1:</button>
+                <input type="text" class="attr_skills_profession1_input" id="attr_study_profession1_field"
+                    name="attr_study_profession1_field">
+            </div>
+        </div>
+        <div class="attr_grid_item">
+            <div class="attr_grid_item sub_skill">
+                <button type="roll" class="attr_study_profession2_field"
+                    value="/roll 2d6 + @{current_modifier} + @{study_profession3_field}">Profession 2:</button>
+                <input type="text" class="attr_skills_profession2_input" id="attr_study_profession2_field"
+                    name="attr_study_profession2_field">
+            </div>
+        </div>
+        <div class="attr_grid_item">
+            <div class="attr_grid_item sub_skill">
+                <button type="roll" class="attr_study_profession3_field"
+                    value="/roll 2d6 + @{current_modifier} + @{study_profession3_field}">Profession
+                    3:</button>
+                <input type="text" class="attr_skills_profession3_input" id="attr_study_profession3_field"
+                    name="attr_study_profession3_field">
+            </div>
+        </div>
+        <div class="attr_grid_item">
+            <div class="attr_grid_item sub_skill">
+                <button type="roll" class="attr_study_profession4_field"
+                    value="/roll 2d6 + @{current_modifier} + @{study_profession4_field}">Profession
+                    4:</button>
+                <input type="text" class="attr_skills_profession4_input" id="attr_study_profession4_field"
+                    name="attr_study_profession4_field">
+            </div>
+        </div>
+        <div class="attr_grid_item">
+            <button type="roll" class="attr_study_science_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_science_field}">Science:</button>
             <input type="text" class="attr_skills_science_input" id="attr_study_science_field"
                 name="attr_study_science_field">
         </div>
-        <div class="attr_grid_item sub_skill">
-            <label for="attr_study_use_technology_field">Prof1:</label>
-            <input type="text" class="attr_skills_use_technology_input" id="attr_study_use_technology_field"
-                name="attr_study_use_technology_field">
-        </div>
-        <div class="attr_grid_item sub_skill">
-            <label for="attr_study_structure_field">Prof2:</label>
-            <input type="text" class="attr_skills_structure_input" id="attr_study_structure_field"
-                name="attr_study_structure_field">
-        </div>
-        <div class="attr_grid_item sub_skill">
-            <label for="attr_study_knowledg_field">Prof3:</label>
-            <input type="text" class="attr_skills_knowledg_input" id="attr_study_knowledg_field"
-                name="attr_study_knowledg_field">
-        </div>
-        <div class="attr_grid_item sub_skill">
-            <label for="attr_study_encounters_field">Prof4:</label>
-            <input type="text" class="attr_skills_encounters_input" id="attr_study_encounters_field"
-                name="attr_study_encounters_field">
+        <div class="attr_grid_item">
+            <button type="roll" class="attr_study_science1_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_science1_field}">Science 1:</button>
+            <input type="text" class="attr_skills_science1_input" id="attr_study_science1_field"
+                name="attr_study_science1_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_history_field">Recon:</label>
-            <input type="text" class="attr_skills_history_input" id="attr_study_history_field"
-                name="attr_study_history_field">
+            <button type="roll" class="attr_study_science2_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_science2_field}">Science 2:</button>
+            <input type="text" class="attr_skills_science2_input" id="attr_study_science2_field"
+                name="attr_study_science2_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_culture_field">Science:</label>
-            <input type="text" class="attr_skills_culture_input" id="attr_study_culture_field"
-                name="attr_study_culture_field">
+            <button type="roll" class="attr_study_science3_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_science3_field}">Science 3:</button>
+            <input type="text" class="attr_skills_science3_input" id="attr_study_science3_field"
+                name="attr_study_scienc3_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_seafarer_field">Seafarer:</label>
+            <button type="roll" class="attr_study_science4_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_science4_field}">Science 4:</button>
+            <input type="text" class="attr_skills_science4_input" id="attr_study_science4_field"
+                name="attr_study_science4_field">
+        </div>
+        <div class="attr_grid_item">
+            <button type="roll" class="attr_study_seafarer_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_seafarer_field}">Seafarer:</button>
             <input type="text" class="attr_skills_seafarer_input" id="attr_study_seafarer_field"
                 name="attr_study_seafarer_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_ocean_ships_field sub_skill">Ocean Ships:</label>
+            <button type="roll" class="attr_ocean_ships_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_ocean_ships_field}">Ocean Ships:</button>
             <input type="text" class="attr_skills_ocean_ships_input" id="attr_study_ocean_ships_field"
                 name="attr_study_ocean_ships_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_personal_field">Personal:</label>
+            <button type="roll" class="attr_study_personal_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_personal_field}">Personal:</button>
             <input type="text" class="attr_skills_personal_input" id="attr_study_personal_field"
                 name="attr_study_personal_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_sail_field">Sail:</label>
+            <button type="roll" class="attr_study_sail_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_sail_field}">Sail:</button>
             <input type="text" class="attr_skills_sail_input" id="attr_study_sail_field" name="attr_study_sail_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_submarine_field">Submarine:</label>
+            <button type="roll" class="attr_study_submarine_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_submarine_field}">Submarine:</button>
             <input type="text" class="attr_skills_submarine_input" id="attr_study_submarine_field"
                 name="attr_study_submarine_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_stealth_field">Stealth:</label>
+            <button type="roll" class="attr_study_stealth_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_stealth_field}">Stealth:</button>
             <input type="text" class="attr_skills_stealth_input" id="attr_study_stealth_field"
                 name="attr_study_stealth_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_steward_field">Steward:</label>
+            <button type="roll" class="attr_study_steward_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_steward_field}">Steward:</button>
             <input type="text" class="attr_skills_steward_input" id="attr_study_steward_field"
                 name="attr_study_steward_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_streetwise_field">Streetwise:</label>
+            <button type="roll" class="attr_study_streetwise_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_streetwise_field}">Streetwise:</button>
             <input type="text" class="attr_skills_streetwise_input" id="attr_study_streetwise_field"
                 name="attr_study_streetwise_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_survival_field">Survival:</label>
+            <button type="roll" class="attr_study_survival_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_survival_field}">Survival:</button>
             <input type="text" class="attr_skills_survival_input" id="attr_study_survival_field"
                 name="attr_study_survival_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_tactics_field">Tactics:</label>
+            <button type="roll" class="attr_study_tactics_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_tactics_field}">Tactics:</button>
             <input type="text" class="attr_skills_tactics_input" id="attr_study_tactics_field"
                 name="attr_study_tactics_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_military_field">Military:</label>
+            <button type="roll" class="attr_study_military_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_military_field}">Military:</button>
             <input type="text" class="attr_skills_military_input" id="attr_study_military_field"
                 name="attr_study_military_field">
         </div>
         <div class="attr_grid_item sub_skill">
-            <label for="attr_study_naval_field">Naval:</label>
+            <button type="roll" class="attr_study_naval_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_naval_field}">Naval:</button>
             <input type="text" class="attr_skills_naval_input" id="attr_study_naval_field"
                 name="attr_study_naval_field">
         </div>
         <div class="attr_grid_item">
-            <label for="attr_study_vacc_suit_field">Vacc Suit:</label>
+            <button type="roll" class="attr_study_vacc_suit_field"
+                value="/roll 2d6 + @{current_modifier} + @{study_vacc_suit_field}">Vacc Suit:</button>
             <input type="text" class="attr_skills_vacc_suit_input" id="attr_study_vacc_suit_field"
                 name="attr_study_vacc_suit_field">
         </div>
     </div>
 
-    <div class="weapons_box">
+    <div class="weapons_box child">
         <h1 style="color: maroon; background-color: black;">Weapons:</h1>
         <fieldset class="repeating_weapons-box">
             <div class="repeating_weapon">
                 <div class="attr_grid_item">
-                    <label for="attr_weapons_weapon_field">Weapon:</label>
-                    <input type="text" class="attr_weapons_weapon_input" id="attr_weapons_weapon_field"
-                        name="attr_weapons_weapon_field">
+                    <label for="attr_weapons_kg_field">Weapon:</label>
+                    <textarea type="text" class="attr_weapons_weapon_input" id="attr_weapons_weapon_field"
+                        name="attr_weapons_weapon_field"></textarea>
                 </div>
                 <div class="attr_grid_item">
                     <label for="attr_weapons_tl_field">TL:</label>
-                    <input type="text" class="attr_weapons_tl_input" id="attr_weapons_tl_field"
-                        name="attr_weapons_tl_field">
+                    <textarea type="text" class="attr_weapons_tl_input" id="attr_weapons_tl_field"
+                        name="attr_weapons_tl_field"></textarea>
                 </div>
                 <div class="attr_grid_item">
                     <label for="attr_weapons_range_field">Range:</label>
-                    <input type="text" class="attr_weapons_range_input" id="attr_weapons_range_field"
-                        name="attr_weapons_range_field">
+                    <textarea type="text" class="attr_weapons_range_input" id="attr_weapons_range_field"
+                        name="attr_weapons_range_field"></textarea>
                 </div>
                 <div class="attr_grid_item">
                     <label for="attr_weapons_damage_field">Damage:</label>
-                    <input type="text" class="attr_weapons_damage_input" id="attr_weapons_damage_field"
-                        name="attr_weapons_damage_field">
+                    <textarea type="text" class="attr_weapons_damage_input" id="attr_weapons_damage_field"
+                        name="attr_weapons_damage_field"></textarea>
                 </div>
                 <div class="attr_grid_item">
                     <label for="attr_weapons_kg_field">KG:</label>
-                    <input type="text" class="attr_weapons_kg_input" id="attr_weapons_kg_field"
-                        name="attr_weapons_kg_field">
+                    <textarea type="text" class="attr_weapons_kg_input" id="attr_weapons_kg_field"
+                        name="attr_weapons_kg_field"></textarea>
                 </div>
                 <div class="attr_grid_item">
                     <label for="attr_weapons_magazine_field">Magazine:</label>
-                    <input type="text" class="attr_weapons_magazine_input" id="attr_weapons_magazine_field"
-                        name="attr_weapons_magazine_field">
+                    <textarea type="text" class="attr_weapons_magazine_input" id="attr_weapons_magazine_field"
+                        name="attr_weapons_magazine_field"></textarea>
                 </div>
                 <div class="attr_grid_item">
                     <label for="attr_weapons_traits_field">Traits:</label>
-                    <input type="text" class="attr_weapons_traits_input" id="attr_weapons_traits_field"
-                        name="attr_weapons_traits_field">
+                    <textarea type="text" class="attr_weapons_traits_input" id="attr_weapons_traits_field"
+                        name="attr_weapons_traits_field"></textarea>
                 </div>
             </div>
         </fieldset>
     </div>
 
-    <div class="augments_box">
+    <div class="augments_box child">
         <h1>Augments:</h1>
         <fieldset class="repeating_augments-box">
             <div class="repeating_augment">
@@ -671,7 +849,7 @@
         </fieldset>
     </div>
 
-    <div class="equipment_box">
+    <div class="equipment_box child">
         <h1 style="color: maroon; background-color: black;">Equipment:</h1>
         <fieldset class="repeating_equipment-box">
             <div class="repeating_equipment">
@@ -692,31 +870,68 @@
         </div>
     </div>
 
-    <div class="misc_box">
+    <div class="misc_box child">
         <!-- Blank1 section -->
         <div class="Blank1 stacked_item_2">
             <textarea class="attr_blank1text" name="attr_blank1text"></textarea>
         </div>
-    
+
         <!-- Notable Ability section -->
         <div class="notable_ability_box stacked_item_2">
             <h1>Notable Ability:</h1>
             <textarea class="attr_notable_ability" name="attr_notable_ability"></textarea>
         </div>
-    
+
         <!-- Blank2 section -->
         <div class="Blank2 stacked_item_2">
             <textarea class="attr_blank2text" name="attr_blank2text"></textarea>
         </div>
-    
+
         <!-- Background section -->
         <div class="Background stacked_item_2">
             <textarea class="attr_backgroundtext" name="attr_backgroundtext"></textarea>
         </div>
-    
+
         <!-- Other Equipment section -->
         <div class="Other_Equipment stacked_item_2">
             <textarea class="attr_otherequipmenttext" name="attr_otherequipmenttext"></textarea>
         </div>
-    </div>    
+    </div>
 </div>
+<script type="text/worker">
+    on("change:roll_modifier", function() {
+      // Get the roll_modifier and all possible attribute modifiers
+      getAttrs(["roll_modifier", "strength_mod", "dexterity_mod", "endurance_mod", "intellect_mod", "education_mod", "social_mod"], function(values) {
+        let modifier = 0; // Default modifier value
+  
+        // Check which attribute the radio button points to
+        switch(values.roll_modifier) {
+          case 'strength_mod':
+            modifier = parseInt(values.strength_mod, 10) || 0;
+            break;
+          case 'dexterity_mod':
+            modifier = parseInt(values.dexterity_mod, 10) || 0;
+            break;
+          case 'endurance_mod':
+            modifier = parseInt(values.endurance_mod, 10) || 0;
+            break;
+          case 'intellect_mod':
+            modifier = parseInt(values.intellect_mod, 10) || 0;
+            break;
+          case 'education_mod':
+            modifier = parseInt(values.education_mod, 10) || 0;
+            break;
+          case 'social_mod':
+            modifier = parseInt(values.social_mod, 10) || 0;
+            break;
+          default:
+            modifier = 0;
+        }
+  
+        // Set the current_modifier attribute
+        setAttrs({
+          current_modifier: modifier
+        });
+      });
+    });
+  </script>
