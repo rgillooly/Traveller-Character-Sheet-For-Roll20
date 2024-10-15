@@ -1859,7 +1859,66 @@
     </div>
 </div>
 <div class="sheet_ship">
-    <div class="grid-container-ship child">
+
+<div class="grid-container-ship child">
+    <label for="attr_ships_name">Ship's Name:</label>
+    <textarea class="attr_ships_name"></textarea>
+    <label for="attr_hull_current">Hull Current:</label>
+    <textarea class="attr_hull_current"></textarea>
+    <label for="attr_hull_total">Hull Total:</label>
+    <textarea class="attr_hull_total"></textarea>
+    <label for="attr_armour">Armour:</label>
+    <textarea class="attr_armour"></textarea>
+    <label for="attr_ship_class">Class:</label>
+    <textarea class="attr_ship_class"></textarea>
+    <label for="attr_power_points">Power Points:</label>
+    <textarea class="attr_power_points"></textarea>
+    <label for="attr_fuel_fill_cost">Fuel (Full Tank) Cost:</label>
+    <textarea class="attr_fuel_fill_cost"></textarea>
+    <label for="attr_ship_mortgage">Mortgage:</label>
+    <textarea class="attr_ship_mortgage"></textarea>
+    <label for="attr_ship_life_support">Life Support:</label>
+    <textarea class="attr_ship_life_support"></textarea>
+    <label for="attr_ship_salaries">Salaries:</label>
+    <textarea class="attr_ship_salaries"></textarea>
+    <label for="attr_ship_maintenance_cost">Cost Per Maintenance Period:</label>
+    <textarea class="attr_ship_maintenance_cost"></textarea>
+    <label for="attr_m_drive_thrust">Maneuver Drive Thrust:</label>
+    <textarea class="attr_m_drive_thrust"></textarea>
+    <label for="attr_r_drive_thrust">Reaction Drive Thrust:</label>
+    <textarea class="attr_r_drive_thrust"></textarea>
+    <label for="attr_j_drive_jump">Jump Drive Jump:</label>
+    <textarea class="attr_j_drive_jump"></textarea>
+</div>
+
+<div class="grid-container-ship-power child">
+    <h1 class="full_h1" style="color: white; background-color: black;">Power Requirements:</h1>
+
+    <label for="attr_ships_basic_systems_power_requirement">Basic Ship Systems:</label>
+    <textarea class="attr_ships_basic_systems_power_requirement"></textarea>
+    <label for="attr_ships_m_drive_power_requirement">Manoeuvre Drive:</label>
+    <textarea class="attr_ships_m_drive_power_requirement"></textarea>
+    <label for="attr_ships_j_drive_power_requirement">Jump Drive:</label>
+    <textarea class="attr_ships_j_drive_power_requirement"></textarea>
+    <label for="attr_ships_sensors_power_requirement">Sensors:</label>
+    <textarea class="attr_ships_sensors_power_requirement"></textarea>
+
+    <div class="weapons_box_power child">
+        <h1 style="color: white; background-color: black;">Weapons Power:</h1>
+        <fieldset class="repeating_weapons-box">
+            <div class="repeating_weapon">
+                <div class="attr_grid_item">
+                    <label for="attr_ships_weapon_power_field">Weapon Power:</label>
+                    <textarea type="text" class="attr_ships_weapon_power_input" id="attr_ships_weapon_power_field"
+                        name="attr_ships_weapon_power_field"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+</div>
+
+    <!-- <div class="grid-container-ship child">
         <button class="custombutton" type="roll" name="roll_2d6" value="/roll 2d6 + @{TL_mod}">TL:</button>
         <input type="number" class="attr_stat_input" id="attr_tl_field" name="attr_tl_field" placeholder="score">
         <input type="number" class="attr_mod_input" id="attr_tl_mod_field" name="attr_tl_mod" placeholder="mod">
@@ -1899,7 +1958,7 @@
         <button type="roll" name="roll_2d6" value="/roll 2d6 + @{cost_mod}">Cost:</button>
         <input type="number" class="attr_stat_input" id="attr_social_field" name="attr_cost" placeholder="score">
         <input type="number" class="attr_mod_input" id="attr_social_mod_field" name="attr_cost_mod" placeholder="mod">
-    </div>
+    </div> -->
 
     <input type="hidden" name="attr_current_modifier" value="0">
     <input type="hidden" name="attr_custom_dice" value="0">
@@ -1962,6 +2021,116 @@
             <label for="attr_custom_penalty">Custom Bonus/Penalty:</label>
             <input type="number" name="attr_custom_penalty" value="0">
         </div>     
+    </div>
+
+    <div class="weapons_box child">
+        <h1 style="color: white; background-color: black;">Weapons:</h1>
+        <fieldset class="repeating_weapons-box">
+            <div class="repeating_weapon">
+                <div class="attr_grid_item">
+                    <label for="attr_weapons_kg_field">Weapons:</label>
+                    <textarea type="text" class="attr_weapons_weapon_input" id="attr_weapons_weapon_field"
+                        name="attr_weapons_weapon_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_weapons_mount_field">Mount:</label>
+                    <textarea type="text" class="attr_weapons_mount_input" id="attr_weapons_mount_field"
+                        name="attr_weapons_mount_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_weapons_tl_field">TL:</label>
+                    <textarea type="text" class="attr_weapons_tl_input" id="attr_weapons_tl_field"
+                        name="attr_weapons_tl_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_weapons_range_field">Range:</label>
+                    <textarea type="text" class="attr_weapons_range_input" id="attr_weapons_range_field"
+                        name="attr_weapons_range_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_weapons_damage_field">Damage:</label>
+                    <textarea type="text" class="attr_weapons_damage_input" id="attr_weapons_damage_field"
+                        name="attr_weapons_damage_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_weapons_magazine_field">Magazine:</label>
+                    <textarea type="text" class="attr_weapons_magazine_input" id="attr_weapons_magazine_field"
+                        name="attr_weapons_magazine_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_weapons_traits_field">Traits:</label>
+                    <textarea type="text" class="attr_weapons_traits_input" id="attr_weapons_traits_field"
+                        name="attr_weapons_traits_field"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="ships_computer_box child">
+        <h1 style="color: white; background-color: black;">Ships's Computer:</h1>
+        <fieldset class="repeating_weapons-box">
+            <div class="repeating_weapon">
+                <div class="attr_grid_item">
+                    <label for="attr_ships_computer_software_packages_field">Software Packages:</label>
+                    <textarea type="text" class="attr_ships_computer_bandwidth_input" id="attr_ships_computer_bandwidth_field"
+                        name="attr_ships_computer_bandwidth_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_ships_computer_bandwidth_field">Bandwidth:</label>
+                    <textarea type="text" class="attr_ships_computer_bandwidth_input" id="attr_ships_computer_bandwidth_field"
+                        name="attr_ships_computer_bandwidth_field"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="ships_sensors_box child">
+        <h1 style="color: white; background-color: black;">Sensors:</h1>
+        <fieldset class="repeating_weapons-box">
+            <div class="repeating_weapon">
+                <div class="attr_grid_item">
+                    <label for="attr_ships_sensors_type_field">Type:</label>
+                    <textarea type="text" class="attr_ships_sensors_type_input" id="attr_ships_sensors_type_field"
+                        name="attr_ships_sensors_type_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_ships_sensors_dm_field">DM:</label>
+                    <textarea type="text" class="attr_ships_sensors_dm_input" id="attr_ships_sensors_dm_field"
+                        name="attr_ships_sensors_dm_field"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="ships_systems_box child">
+        <h1 style="color: white; background-color: black;">Systems:</h1>
+        <fieldset class="repeating_weapons-box">
+            <div class="repeating_weapon">
+                <div class="attr_grid_item">
+                    <label for="attr_ship_systems_name_field">Name:</label>
+                    <textarea type="text" class="attr_ship_systems_name_input" id="attr_ship_systems_name_field"
+                        name="attr_ship_systems_name_field"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="ships_cargo_box child">
+        <h1 style="color: white; background-color: black;">Cargo:</h1>
+        <fieldset class="repeating_weapons-box">
+            <div class="repeating_weapon">
+                <div class="attr_grid_item">
+                    <label for="attr_ships_cargo_name_field">Name:</label>
+                    <textarea type="text" class="attr_ships_cargo_name_input" id="attr_ships_cargo_name_field"
+                        name="attr_ships_cargo_name_field"></textarea>
+                </div>
+                <div class="attr_grid_item">
+                    <label for="attr_ships_cargo_tons_field">Tons:</label>
+                    <textarea type="text" class="attr_ships_cargo_tons_input" id="attr_ships_cargo_tons_field"
+                        name="attr_ships_cargo_tons_field"></textarea>
+                </div>
+            </div>
+        </fieldset>
     </div>
 </div>
 </div>

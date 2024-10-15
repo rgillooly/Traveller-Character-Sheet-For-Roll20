@@ -18,7 +18,13 @@ background-position: center; /* Centers the GIF */
 
 .grid-container-ship {
     display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between items */
+}
+
+.grid-container-ship-power {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
     gap: 10px; /* Space between items */
 }
 
@@ -337,6 +343,15 @@ fieldset {
 .weapons_box {
     grid-column: span 3; /* Spans across 3 columns */ 
     grid-template-columns: 1fr repeat(5, min-content);
+}
+
+.weapons_box_power {
+    grid-column: span 4; /* Spans across 3 columns */ 
+    grid-template-columns: 1fr repeat(5, min-content);
+}
+
+.full_h1 {
+    grid-column: span 4;
 }
 
 .repeating_weapon {
