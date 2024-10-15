@@ -1,5 +1,25 @@
+.charsheet .sheet_pc,
+.charsheet .sheet_npc,
+.charsheet .sheet_ship {
+    display: none;
+}
+.charsheet .sheet-typetoggle[value="pc"] ~ div.sheet_pc,
+.charsheet .sheet-typetoggle[value="npc"] ~ div.sheet_npc,
+.charsheet .sheet-typetoggle[value="ship"] ~ div.sheet_ship {
+    display: block;
+}
+
 .charactersheet {
 background-color: black;
+background-size: cover; /* Adjusts the GIF to cover the div */
+background-repeat: no-repeat; /* Prevents the GIF from repeating */
+background-position: center; /* Centers the GIF */
+}
+
+.grid-container-ship {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between items */
 }
 
 .element-class {
@@ -54,10 +74,15 @@ select {
     min-height: 100px; /* Minimum height for each child */
     padding: 10px; /* Padding for spacing */
     box-sizing: border-box; /* Include padding in width/height */
-    box-shadow: 10px 10px 15px white;
     border-bottom: 5px solid maroon;
     border-right: 5px solid maroon;
+    background-image: url('https://github.com/rgillooly/Traveller-Character-Sheet-For-Roll20/raw/main/Background.jpg');
+    background-size: cover; /* Ensures the image covers each div */
+    background-repeat: no-repeat; /* No repeating the image */
+    background-position: center; /* Centers the image in each div */
 }
+
+
 
 label {
     font-size: 10px !important;
@@ -94,7 +119,7 @@ textarea {
 /* Default styles for all boxes */
 .main_container div {
     color:#ffffff;
-    background-color: rgb(22, 22, 22) !important; /* Background color for the div */
+    background-color: rgb(22, 22, 22); /* Background color for the div */
     box-sizing: border-box;
     width: 100%;
     align-items: stretch; /* Stretch items to fill the row height */
@@ -105,6 +130,7 @@ textarea {
 .roll_palette {
     grid-column: span 4;
     justify-content: center; /* Center items vertically */
+    background-color: transparent !important;
 }
 
 h1 {
@@ -422,6 +448,7 @@ fieldset {
     grid-template-rows: repeat(1, 1fr);
     box-sizing: border-box;           /* Include padding and border in width/height */
     grid-column: span 4;
+    background-color: transparent;
 }
 
 .radio_grid {
