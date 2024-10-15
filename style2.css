@@ -1,10 +1,38 @@
-.characterSheet {
-    box-sizing: border-box;
-    padding: 20px; /* Add padding if needed */
-    min-height: 600px; /* Set minimum height */
-    min-width: 400px; /* Set minimum width */
+.charactersheet {
+background-color: black;
 }
 
+.element-class {
+    background-color: rgb(22, 22, 22) !important; /* Replace with a solid color */
+    background-image: '' !important; /* Ensure no gradient is applied */
+}
+
+.element-class {
+    background: none !important; /* Reset all background properties */
+}
+
+button {
+    background-image: none !important; /* Remove any existing gradient */
+    background-color: rgb(0, 0, 0) !important; /* Set to your desired color */
+    color: white !important; /* Text color */
+    border: 1px solid white !important; /* No border */
+    border-radius: 5px !important; /* Rounded corners */
+    font-size: 10px !important; /* Font size */
+    cursor: pointer !important; /* Pointer cursor */
+    padding: 10px 15px !important; /* Padding */
+    transition: background-color 0.3s !important; /* Transition */
+}
+
+/* Hover state */
+button:hover { /* btn class with custom class hover */
+    background-color: darkgray !important; /* Change to dark gray when hovered */
+}
+
+/* Optional: Override btn default styles */
+.btn {
+    background-color: inherit !important; /* Allow background to inherit from custom styles */
+    color: inherit !important;             /* Allow text color to inherit */
+}
 
 input, 
 select {
@@ -14,7 +42,7 @@ select {
     box-sizing: border-box;            /* Include padding and border in total width */
     padding: 8px;                      /* Add padding for better appearance */
     font: inherit;                     /* Inherit font styles from the parent */
-    background: rgb(17, 17, 17);   /* Set a light background color */
+    background: rgb(22, 22, 22);   /* Set a light background color */
     border-radius: 4px;                /* Optional: add some border-radius */
     overflow: hidden;                  /* Prevent overflow of text */
     white-space: nowrap;               /* Prevent text wrapping for input fields */
@@ -26,6 +54,9 @@ select {
     min-height: 100px; /* Minimum height for each child */
     padding: 10px; /* Padding for spacing */
     box-sizing: border-box; /* Include padding in width/height */
+    box-shadow: 10px 10px 15px white;
+    border-bottom: 5px solid maroon;
+    border-right: 5px solid maroon;
 }
 
 label {
@@ -34,43 +65,58 @@ label {
 
 textarea {
     color: white;
-    background: rgb(17, 17, 17);   /* Set a light background color */  
+    background: rgb(22, 22, 22);   /* Set a light background color */  
 }
 
 .main_container {
     display: grid;
-    outline: 1px solid white;
+    width: 100%; /* Allow container to shrink to fit */
+    min-width: 300px; /* Optional: minimum width to maintain readability */
     grid-template-columns: repeat(4, 1fr); /* 4 columns, flexible widths */
     grid-template-rows: repeat(12, auto); /* Auto-sized rows */
     padding: 20px;
-    background-color: rgb(17, 17, 17); /* Background color for the div */
-    box-sizing: border-box;
-    column-gap: 10px;
-    row-gap: 10px;
+    background-color: rgb(22, 22, 22); /* Background color for the div */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    column-gap: 10px; /* Space between columns */
+    row-gap: 10px; /* Space between rows */
     align-items: stretch; /* Stretch items to fill the row height */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center; /* Center the image */
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Optional: adjust text size for better fit */
+.main_container * {
+    font-size: 1em; /* Make all child elements slightly smaller */
 }
 
 /* Default styles for all boxes */
 .main_container div {
     color:#ffffff;
-    background-color: rgb(17, 17, 17) !important; /* Background color for the div */
+    background-color: rgb(22, 22, 22) !important; /* Background color for the div */
     box-sizing: border-box;
     width: 100%;
     align-items: stretch; /* Stretch items to fill the row height */
     justify-content: center; /* Center content horizontally */
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Soft drop shadow */
-    border-radius: 8px; /* Rounds the corners by 20px */
-    border-color: 3px solid white;
+    border-radius: 8px;
 }
 
 .roll_palette {
     grid-column: span 4;
+    justify-content: center; /* Center items vertically */
 }
 
 h1 {
-    color: maroon;
+    color: rgb(255, 255, 255);
     background-color: black;
     padding: 10px; /* Optional: Add some padding */
+    border-radius: 4px;                /* Optional: add some border-radius */
+    text-shadow: 
+    -1px -1px 0 maroon,  
+    1px -1px 0 maroon,
+    -1px 1px 0 maroon,
+    1px 1px 0 maroon; /* Outline effect */
 }
 
 /* Specific grid-area and spanning */
@@ -79,52 +125,22 @@ h1 {
     grid-template-columns: repeat(1, 1fr); /* Two equal columns */
     grid-template-rows: repeat(2, auto);   /* Four rows, height adjusts to content */
     padding: 20px;                         /* Padding for the container */
-    background-color: rgb(17, 17, 17);    /* Background color for the div */
+    background-color: rgb(22, 22, 22);    /* Background color for the div */
     box-sizing: border-box;                /* Include padding and border in width */
     grid-column: span 1;
 }
 
+.general_box textarea {
+    height: 45px; /* Set the height to 20 pixels */
+    resize: none; /* Prevent resizing by the user */
+}
+
+
 .example-image {
     width: 200px;                         /* Adjust width as needed */
-    height: auto;                         /* Maintain aspect ratio */
+    height: 220px;                         /* Maintain aspect ratio */
     grid-column: 1;
     grid-row: 2;
-}
-
-button {
-    background-color: rgb(17, 17, 17); /* Dark gray background color */
-    color: white;                     /* White text color */
-    border: none;                     /* No border */
-    border-radius: 5px;              /* Rounded corners */
-    font-size: 10px !important;                  /* Increase font size for better readability */
-    cursor: pointer;                  /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Add transition for hover effect */
-}
-
-button:hover {
-    background-color: rgb(17, 17, 17); /* Darker shade on hover */
-}
-
-button:hover, .clickable-div:hover {
-    background-color: rgb(17, 17, 17); /* Darker on hover */
-}
-.clickable-div {
-    cursor: pointer; /* Cursor pointer for div */
-}
-
-.attr_label {
-    cursor: pointer;                   /* Change cursor to pointer to indicate it's clickable */
-    background-color: #4CAF50;        /* Green background color */
-    color: white;                     /* White text color */
-    padding: 10px;                    /* Padding for a button-like appearance */
-    margin-bottom: 5px;               /* Space below each label */
-    border-radius: 5px;               /* Rounded corners */
-    text-align: center;                /* Center the text */
-    display: inline-block;            /* Allow the label to behave like a block */
-}
-
-.attr_label:hover {
-    background-color: #45a049;        /* Darker green on hover */
 }
 
 .attr_armor_box {
@@ -134,13 +150,17 @@ button:hover, .clickable-div:hover {
 
 .attr_statsandmods_box {
     display: grid;
-    grid-template-columns: repeat(9, 1fr); /* 9 equal columns */
-    grid-template-rows: repeat(2, 50px);   /* 2 rows that adjust to content */
-    gap: 10px;                            /* Space between grid items */
+    grid-template-columns: repeat(16, 1fr); /* 9 equal columns */
+    grid-template-rows: repeat(3, 75px);   /* 2 rows that adjust to content */
     padding: 10px;                        /* Padding for the box */
     box-sizing: border-box;               /* Include padding and border in width */
     grid-row: 2;
     grid-column: span 4;
+}
+
+.full-span {
+    grid-column: span 16;
+    grid-row: 1;
 }
 
 .attr_stat_input {
@@ -199,14 +219,13 @@ button:hover, .clickable-div:hover {
 textarea {
     width: 100%;                     /* Full width of the parent */
     padding: 10px;                   /* Padding inside the textarea */
-    background: rgb(17, 17, 17);     /* Set a dark background color */
+    background: rgb(22, 22, 22);     /* Set a dark background color */
     border: 1px solid #ffffff;       /* Add a white border */
     box-sizing: border-box;          /* Include padding in width/height calculations */
     resize: none;                    /* Prevent manual resizing by the user */
     line-height: 1.5;                /* Set line-height for readability */
     font-family: inherit;            /* Inherit font family */
     color: #ffffff;                  /* Set text color */
-    min-height: 60px;                /* Minimum height */
     max-height: 300px;               /* Maximum height */
     overflow-y: auto;                /* Enable vertical scrolling if needed */
     word-wrap: break-word;           /* Ensure text wraps inside the box */
@@ -249,7 +268,7 @@ textarea {
     grid-row: span 1; /* Single row in the main grid */
     display: grid; /* Set up a nested grid */
     grid-template-columns: repeat(6, 1fr); /* Nested grid with 6 equal columns */
-    grid-template-rows: repeat(17, 1fr); /* 17 rows, each 30px tall */
+    grid-template-rows: repeat(22, 1fr); /* 22 rows, each 30px tall */
     width: 100%; /* Full width of the parent container */
     height: min-content; /* Auto height for flexibility */
     column-gap: 10px; /* Space between columns */
@@ -352,7 +371,7 @@ fieldset {
 .textarea {
     width: 100%;                     /* Full width of the parent */
     padding: 10px;                   /* Padding inside the textarea */
-    background: rgb(17, 17, 17);   /* Set a light background color */
+    background: rgb(22, 22, 22);   /* Set a light background color */
     border: 1px solid #ffffff;            /* Add a border */
     box-sizing: border-box;           /* Include padding in width */
     resize: none;                    /* Prevent manual resizing */
@@ -402,6 +421,7 @@ fieldset {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(1, 1fr);
     box-sizing: border-box;           /* Include padding and border in width/height */
+    grid-column: span 4;
 }
 
 .radio_grid {
